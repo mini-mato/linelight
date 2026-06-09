@@ -1,0 +1,232 @@
+{
+  "$schema": "atlas/primitive[family=coord-system]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Separable orthogonal coordinate systems. The 11 systems in 3D in which the Helmholtz/Laplace equation is R-separable are listed in Morse & Feshbach (1953), Methods of Theoretical Physics, Vol. I, ch. 5. The 2D analogues (confocal coordinate families) are also separable for the 2D Helmholtz equation. Renderer is schematic — only one or two iso-surface slices are drawn.",
+  "primitives": [
+    {
+      "id": "coord.2d.cartesian",
+      "family": "coord-system",
+      "name": "Cartesian (2D)",
+      "symbol": "(x, y)",
+      "attrs": {
+        "dimension": 2,
+        "separablePdes": ["Laplace", "Helmholtz", "Schrodinger (free particle)"],
+        "basisFunctions": ["sin(kx)", "cos(kx)"],
+        "metric": "ds^2 = dx^2 + dy^2"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Trivial separability. Two orthogonal families of straight lines."
+    },
+    {
+      "id": "coord.2d.polar",
+      "family": "coord-system",
+      "name": "polar (2D)",
+      "symbol": "(r, φ)",
+      "attrs": {
+        "dimension": 2,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["J_n(kr) e^{inφ}"],
+        "metric": "ds^2 = dr^2 + r^2 dφ^2"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Concentric circles + radial lines. Helmholtz separates into Bessel times exp(inφ)."
+    },
+    {
+      "id": "coord.2d.parabolic",
+      "family": "coord-system",
+      "name": "parabolic (2D)",
+      "symbol": "(ξ, η)",
+      "attrs": {
+        "dimension": 2,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["parabolic cylinder functions D_ν"],
+        "metric": "ds^2 = (ξ^2 + η^2)(dξ^2 + dη^2)"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Two orthogonal families of confocal parabolas with common focus at origin and axis along x. Used in the Stark-effect parabolic separation of hydrogen."
+    },
+    {
+      "id": "coord.2d.elliptic",
+      "family": "coord-system",
+      "name": "elliptic (2D)",
+      "symbol": "(μ, ν)",
+      "attrs": {
+        "dimension": 2,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["Mathieu functions"],
+        "metric": "ds^2 = a^2(μ^2 - ν^2)(dμ^2/(μ^2-1) + dν^2/(1-ν^2))"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Confocal ellipses + hyperbolae sharing foci at ±a. Helmholtz separates into Mathieu functions."
+    },
+    {
+      "id": "coord.3d.cartesian",
+      "family": "coord-system",
+      "name": "Cartesian (3D)",
+      "symbol": "(x, y, z)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz", "Schrodinger (free particle)"],
+        "basisFunctions": ["plane waves e^{i k·r}"],
+        "metric": "ds^2 = dx^2 + dy^2 + dz^2"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "First of the eleven 3D separable systems."
+    },
+    {
+      "id": "coord.3d.circular-cylindrical",
+      "family": "coord-system",
+      "name": "circular cylindrical (3D)",
+      "symbol": "(ρ, φ, z)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["J_n(kρ) e^{inφ} e^{i k_z z}"],
+        "metric": "ds^2 = dρ^2 + ρ^2 dφ^2 + dz^2"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Polar in the xy-plane, extruded along z. Bessel-times-exponential basis."
+    },
+    {
+      "id": "coord.3d.elliptic-cylindrical",
+      "family": "coord-system",
+      "name": "elliptic cylindrical (3D)",
+      "symbol": "(μ, ν, z)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["Mathieu functions × e^{i k_z z}"],
+        "metric": "ds^2 = a^2(μ^2 - ν^2)(...)+ dz^2"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "2D elliptic in the xy-plane extruded along z. Solves for elliptic waveguide modes."
+    },
+    {
+      "id": "coord.3d.parabolic-cylindrical",
+      "family": "coord-system",
+      "name": "parabolic cylindrical (3D)",
+      "symbol": "(ξ, η, z)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["parabolic cylinder D_ν × e^{i k_z z}"],
+        "metric": "ds^2 = (ξ^2 + η^2)(dξ^2 + dη^2) + dz^2"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "2D parabolic in the xy-plane extruded along z. Diffraction by a half-plane uses these."
+    },
+    {
+      "id": "coord.3d.spherical",
+      "family": "coord-system",
+      "name": "spherical (3D)",
+      "symbol": "(r, θ, φ)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz", "Schrodinger (central potential)"],
+        "basisFunctions": ["j_l(kr) Y_l^m(θ, φ)"],
+        "metric": "ds^2 = dr^2 + r^2 dθ^2 + r^2 sin^2θ dφ^2"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Default for any centrally-symmetric problem. Hydrogen atom separates here."
+    },
+    {
+      "id": "coord.3d.prolate-spheroidal",
+      "family": "coord-system",
+      "name": "prolate spheroidal (3D)",
+      "symbol": "(ξ, η, φ)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["prolate spheroidal harmonics"],
+        "metric": "ds^2 = a^2(ξ^2 - η^2)(dξ^2/(ξ^2-1) + dη^2/(1-η^2)) + a^2(ξ^2-1)(1-η^2) dφ^2"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Confocal prolate ellipsoids + two-sheet hyperboloids of revolution. Used for the H2+ molecule (two-center problem)."
+    },
+    {
+      "id": "coord.3d.oblate-spheroidal",
+      "family": "coord-system",
+      "name": "oblate spheroidal (3D)",
+      "symbol": "(ξ, η, φ)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["oblate spheroidal harmonics"],
+        "metric": "ds^2 = a^2(ξ^2 + η^2)(dξ^2/(ξ^2+1) + dη^2/(1-η^2)) + a^2(ξ^2+1)(1-η^2) dφ^2"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Confocal oblate ellipsoids + one-sheet hyperboloids. Earth-shape geodesy and electromagnetic disk problems."
+    },
+    {
+      "id": "coord.3d.parabolic",
+      "family": "coord-system",
+      "name": "parabolic (3D)",
+      "symbol": "(ξ, η, φ)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz", "Schrodinger (Coulomb)"],
+        "basisFunctions": ["confluent hypergeometric ₁F₁"],
+        "metric": "ds^2 = (ξ + η)(dξ^2/(4ξ) + dη^2/(4η)) + ξη dφ^2"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Confocal paraboloids of revolution. Hydrogen Stark effect separates here, not in spherical."
+    },
+    {
+      "id": "coord.3d.conical",
+      "family": "coord-system",
+      "name": "conical (3D)",
+      "symbol": "(r, θ, λ)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["Lame functions"],
+        "metric": "ds^2 = dr^2 + r^2(dθ^2 + dλ^2 with elliptic angular metric)"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Spherical r times two confocal-cone angular variables. Lamé functions arise."
+    },
+    {
+      "id": "coord.3d.ellipsoidal",
+      "family": "coord-system",
+      "name": "ellipsoidal (3D)",
+      "symbol": "(λ, μ, ν)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["Lame functions"],
+        "metric": "ds^2 = sum (...)/(P(λ,μ,ν)) terms; see Morse-Feshbach §5.1"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Three families of confocal quadrics: ellipsoid, one-sheet hyperboloid, two-sheet hyperboloid sharing the same foci. Most general orthogonal separable system in 3D."
+    },
+    {
+      "id": "coord.3d.paraboloidal",
+      "family": "coord-system",
+      "name": "paraboloidal (3D)",
+      "symbol": "(λ, μ, ν)",
+      "attrs": {
+        "dimension": 3,
+        "separablePdes": ["Laplace", "Helmholtz"],
+        "basisFunctions": ["Baer functions / generalized Lame"],
+        "metric": "ds^2 in terms of three confocal paraboloids"
+      },
+      "sourceId": "morse-feshbach-1953",
+      "retrievedAt": "2026-05-04",
+      "notes": "Three families of confocal paraboloids. The three-dimensional paraboloidal limit of ellipsoidal coordinates."
+    }
+  ]
+}

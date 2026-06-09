@@ -1,0 +1,562 @@
+{
+  "$schema": "atlas/primitive[family=energy-level]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Bound-state energy levels referenced by the spectral-line seed. Hydrogen levels carry closed-form Rydberg energies E_n = -R_H * h * c / n^2 (eV), with R_H = 109677.583 cm^-1 (reduced-mass-corrected for H). Non-hydrogenic levels are tagged schematic — only the term symbol + electron configuration are recorded; the eV value is intentionally absent because src/data/elements/ does not store it (the brief forbids inventing values). All eV values for H derived from -13.598 eV / n^2.",
+  "primitives": [
+    {
+      "id": "energy-level.h.n1",
+      "family": "energy-level",
+      "name": "H n=1 ground",
+      "symbol": "1s",
+      "attrs": {
+        "n": 1,
+        "termSymbol": "²S_{1/2}",
+        "electronConfig": "1s",
+        "energyEV": -13.598,
+        "energyCm1": -109677.6
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Ground state. Energy is the Rydberg formula evaluated at n=1; sign convention E_infinity = 0."
+    },
+    {
+      "id": "energy-level.h.n2",
+      "family": "energy-level",
+      "name": "H n=2",
+      "symbol": "2",
+      "attrs": {
+        "n": 2,
+        "termSymbol": "²S_{1/2} / ²P_{1/2,3/2}",
+        "electronConfig": "n=2 (2s+2p)",
+        "energyEV": -3.3995,
+        "energyCm1": -27419.4
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Hydrogen levels of equal n are degenerate to first order (Bohr); fine-structure split shown as a range."
+    },
+    {
+      "id": "energy-level.h.n3",
+      "family": "energy-level",
+      "name": "H n=3",
+      "symbol": "3",
+      "attrs": {
+        "n": 3,
+        "electronConfig": "n=3",
+        "energyEV": -1.5109,
+        "energyCm1": -12186.4
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.h.n4",
+      "family": "energy-level",
+      "name": "H n=4",
+      "symbol": "4",
+      "attrs": {
+        "n": 4,
+        "electronConfig": "n=4",
+        "energyEV": -0.84988,
+        "energyCm1": -6854.85
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.h.n5",
+      "family": "energy-level",
+      "name": "H n=5",
+      "symbol": "5",
+      "attrs": {
+        "n": 5,
+        "electronConfig": "n=5",
+        "energyEV": -0.54392,
+        "energyCm1": -4387.1
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.h.n6",
+      "family": "energy-level",
+      "name": "H n=6",
+      "symbol": "6",
+      "attrs": {
+        "n": 6,
+        "electronConfig": "n=6",
+        "energyEV": -0.37772,
+        "energyCm1": -3046.6
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.h.n1.f0",
+      "family": "energy-level",
+      "name": "H 1s F=0 (singlet hyperfine)",
+      "symbol": "F=0",
+      "attrs": {
+        "n": 1,
+        "termSymbol": "²S_{1/2}, F=0",
+        "electronConfig": "1s",
+        "energyEV": -13.598,
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Hyperfine sublevel of n=1 ground; energy split from F=1 by ~5.87 μeV (1420 MHz)."
+    },
+    {
+      "id": "energy-level.h.n1.f1",
+      "family": "energy-level",
+      "name": "H 1s F=1 (triplet hyperfine)",
+      "symbol": "F=1",
+      "attrs": {
+        "n": 1,
+        "termSymbol": "²S_{1/2}, F=1",
+        "electronConfig": "1s",
+        "energyEV": -13.598,
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Upper hyperfine sublevel; 21 cm transition lower → upper."
+    },
+    {
+      "id": "energy-level.he.heII.1s",
+      "family": "energy-level",
+      "name": "He II 1s ground",
+      "symbol": "1s",
+      "attrs": {
+        "n": 1,
+        "termSymbol": "²S_{1/2}",
+        "electronConfig": "He+ 1s",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Singly ionized helium ground state. eV omitted — not in source data file."
+    },
+    {
+      "id": "energy-level.he.heII.2p",
+      "family": "energy-level",
+      "name": "He II 2p",
+      "symbol": "2p",
+      "attrs": {
+        "n": 2,
+        "termSymbol": "²P",
+        "electronConfig": "He+ 2p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.2-1s",
+      "family": "energy-level",
+      "name": "He 2¹S",
+      "symbol": "2¹S",
+      "attrs": {
+        "termSymbol": "2¹S_0",
+        "electronConfig": "1s 2s",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.2-3s",
+      "family": "energy-level",
+      "name": "He 2³S",
+      "symbol": "2³S",
+      "attrs": {
+        "termSymbol": "2³S_1",
+        "electronConfig": "1s 2s",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Metastable triplet. He I 1083 lower level."
+    },
+    {
+      "id": "energy-level.he.2-1p",
+      "family": "energy-level",
+      "name": "He 2¹P",
+      "symbol": "2¹P",
+      "attrs": {
+        "termSymbol": "2¹P_1",
+        "electronConfig": "1s 2p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.2-3p",
+      "family": "energy-level",
+      "name": "He 2³P",
+      "symbol": "2³P",
+      "attrs": {
+        "termSymbol": "2³P",
+        "electronConfig": "1s 2p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.3-1p",
+      "family": "energy-level",
+      "name": "He 3¹P",
+      "symbol": "3¹P",
+      "attrs": {
+        "termSymbol": "3¹P_1",
+        "electronConfig": "1s 3p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.3-3p",
+      "family": "energy-level",
+      "name": "He 3³P",
+      "symbol": "3³P",
+      "attrs": {
+        "termSymbol": "3³P",
+        "electronConfig": "1s 3p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.3-3s",
+      "family": "energy-level",
+      "name": "He 3³S",
+      "symbol": "3³S",
+      "attrs": {
+        "termSymbol": "3³S_1",
+        "electronConfig": "1s 3s",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.3-1d",
+      "family": "energy-level",
+      "name": "He 3¹D",
+      "symbol": "3¹D",
+      "attrs": {
+        "termSymbol": "3¹D_2",
+        "electronConfig": "1s 3d",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.3-3d",
+      "family": "energy-level",
+      "name": "He 3³D",
+      "symbol": "3³D",
+      "attrs": {
+        "termSymbol": "3³D",
+        "electronConfig": "1s 3d",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.4-3s",
+      "family": "energy-level",
+      "name": "He 4³S",
+      "symbol": "4³S",
+      "attrs": {
+        "termSymbol": "4³S_1",
+        "electronConfig": "1s 4s",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.4-1d",
+      "family": "energy-level",
+      "name": "He 4¹D",
+      "symbol": "4¹D",
+      "attrs": {
+        "termSymbol": "4¹D_2",
+        "electronConfig": "1s 4d",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.he.4-3d",
+      "family": "energy-level",
+      "name": "He 4³D",
+      "symbol": "4³D",
+      "attrs": {
+        "termSymbol": "4³D",
+        "electronConfig": "1s 4d",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.hg.6-1s0",
+      "family": "energy-level",
+      "name": "Hg 6¹S₀ ground",
+      "symbol": "6¹S₀",
+      "attrs": {
+        "termSymbol": "6¹S_0",
+        "electronConfig": "[Xe] 4f¹⁴ 5d¹⁰ 6s²",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.hg.6-1p1",
+      "family": "energy-level",
+      "name": "Hg 6¹P₁",
+      "symbol": "6¹P₁",
+      "attrs": {
+        "termSymbol": "6¹P_1",
+        "electronConfig": "[Xe] 4f¹⁴ 5d¹⁰ 6s 6p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.hg.6-3p1",
+      "family": "energy-level",
+      "name": "Hg 6³P₁",
+      "symbol": "6³P₁",
+      "attrs": {
+        "termSymbol": "6³P_1",
+        "electronConfig": "[Xe] 4f¹⁴ 5d¹⁰ 6s 6p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Upper level of the spin-forbidden 253.65 nm line."
+    },
+    {
+      "id": "energy-level.hg.6-3p",
+      "family": "energy-level",
+      "name": "Hg 6³P",
+      "symbol": "6³P",
+      "attrs": {
+        "termSymbol": "6³P",
+        "electronConfig": "[Xe] 4f¹⁴ 5d¹⁰ 6s 6p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Term-grouped 6³P_{0,1,2}; lower level of the visible 405/436/546 nm trio."
+    },
+    {
+      "id": "energy-level.hg.6-3d",
+      "family": "energy-level",
+      "name": "Hg 6³D",
+      "symbol": "6³D",
+      "attrs": {
+        "termSymbol": "6³D",
+        "electronConfig": "[Xe] 4f¹⁴ 5d⁹ 6s² 6d",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.hg.7-3s",
+      "family": "energy-level",
+      "name": "Hg 7³S",
+      "symbol": "7³S",
+      "attrs": {
+        "termSymbol": "7³S_1",
+        "electronConfig": "[Xe] 4f¹⁴ 5d¹⁰ 6s 7s",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Upper level of the 405/436/546 nm visible trio."
+    },
+    {
+      "id": "energy-level.na.3-2s",
+      "family": "energy-level",
+      "name": "Na 3²S (term-grouped)",
+      "symbol": "3²S",
+      "attrs": {
+        "termSymbol": "3²S",
+        "electronConfig": "[Ne] 3s",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.na.3-2s1-2",
+      "family": "energy-level",
+      "name": "Na 3²S₁/₂ ground",
+      "symbol": "3²S₁/₂",
+      "attrs": {
+        "n": 3,
+        "l": 0,
+        "j": 0.5,
+        "termSymbol": "3²S_{1/2}",
+        "electronConfig": "[Ne] 3s",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.na.3-2p",
+      "family": "energy-level",
+      "name": "Na 3²P (term-grouped)",
+      "symbol": "3²P",
+      "attrs": {
+        "termSymbol": "3²P",
+        "electronConfig": "[Ne] 3p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.na.3-2p1-2",
+      "family": "energy-level",
+      "name": "Na 3²P₁/₂",
+      "symbol": "3²P₁/₂",
+      "attrs": {
+        "n": 3,
+        "l": 1,
+        "j": 0.5,
+        "termSymbol": "3²P_{1/2}",
+        "electronConfig": "[Ne] 3p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Lower fine-structure component of 3p; D₁ upper level."
+    },
+    {
+      "id": "energy-level.na.3-2p3-2",
+      "family": "energy-level",
+      "name": "Na 3²P₃/₂",
+      "symbol": "3²P₃/₂",
+      "attrs": {
+        "n": 3,
+        "l": 1,
+        "j": 1.5,
+        "termSymbol": "3²P_{3/2}",
+        "electronConfig": "[Ne] 3p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Upper fine-structure component; D₂ upper level."
+    },
+    {
+      "id": "energy-level.na.3-2d",
+      "family": "energy-level",
+      "name": "Na 3²D",
+      "symbol": "3²D",
+      "attrs": {
+        "termSymbol": "3²D",
+        "electronConfig": "[Ne] 3d",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.na.4-2p",
+      "family": "energy-level",
+      "name": "Na 4²P",
+      "symbol": "4²P",
+      "attrs": {
+        "termSymbol": "4²P",
+        "electronConfig": "[Ne] 4p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.na.4-2d",
+      "family": "energy-level",
+      "name": "Na 4²D",
+      "symbol": "4²D",
+      "attrs": {
+        "termSymbol": "4²D",
+        "electronConfig": "[Ne] 4d",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.ne.2p5-3s",
+      "family": "energy-level",
+      "name": "Ne 2p⁵3s",
+      "symbol": "2p⁵3s",
+      "attrs": {
+        "electronConfig": "[He] 2s² 2p⁵ 3s",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Lower level of the visible 540–703 nm Ne thicket."
+    },
+    {
+      "id": "energy-level.ne.2p5-3p",
+      "family": "energy-level",
+      "name": "Ne 2p⁵3p",
+      "symbol": "2p⁵3p",
+      "attrs": {
+        "electronConfig": "[He] 2s² 2p⁵ 3p",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Upper level of the visible 540–703 nm Ne thicket."
+    },
+    {
+      "id": "energy-level.ne.neII.2p3-2",
+      "family": "energy-level",
+      "name": "Ne II ²P₃/₂ ground",
+      "symbol": "²P₃/₂",
+      "attrs": {
+        "termSymbol": "²P_{3/2}",
+        "electronConfig": "Ne+ 2p⁵",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "energy-level.ne.neII.2p1-2",
+      "family": "energy-level",
+      "name": "Ne II ²P₁/₂",
+      "symbol": "²P₁/₂",
+      "attrs": {
+        "termSymbol": "²P_{1/2}",
+        "electronConfig": "Ne+ 2p⁵",
+        "schematic": true
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Excited fine-structure component; [Ne II] 12.8 μm M1 upper level."
+    }
+  ]
+}

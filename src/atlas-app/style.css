@@ -1,0 +1,457 @@
+/*
+ * linelight atlas v4-alpha — app shell stylesheet.
+ *
+ * Layout:
+ *   <body>
+ *     <header.app-topbar>
+ *     <aside.app-toc>
+ *     <main.app-stage>
+ *       <div.card-frame>
+ *         <div.card-face.front>
+ *         <div.card-face.back>
+ *     <footer.app-bottombar>
+ *     <div.act-overlay (transient)>
+ *
+ * `body` has overflow:hidden so the page never scrolls. The card-frame
+ * is centered in the stage and animates via CSS transforms.
+ */
+
+:root {
+  --bg: #f7f6f1;
+  --card-bg: #fdfdfd;
+  --ink: #0e2a2f;
+  --ink-soft: #4a6c70;
+  --accent: #1a3a3f;
+  --rule: #d8d3c1;
+  --card-w: 520px;
+  --top-h: 56px;
+  --bot-h: 56px;
+  --toc-w: 220px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  overflow: hidden;
+  font:
+    15px/1.5 ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: var(--toc-w) 1fr;
+  grid-template-rows: var(--top-h) 1fr var(--bot-h);
+  grid-template-areas:
+    'top top'
+    'toc stage'
+    'bot bot';
+}
+
+@media (max-width: 900px) {
+  #root {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'top'
+      'stage'
+      'bot';
+  }
+  .app-toc {
+    display: none;
+  }
+}
+
+/* --- top bar ----------------------------------------------------------- */
+.app-topbar {
+  grid-area: top;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 16px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg);
+}
+.app-topbar .breadcrumb {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 12px;
+  color: var(--ink-soft);
+  letter-spacing: 0.5px;
+}
+.app-topbar .breadcrumb .section-num {
+  color: var(--accent);
+  font-weight: 600;
+}
+.app-topbar .breadcrumb .section-title {
+  color: var(--ink);
+  font-weight: 500;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+}
+.app-topbar .breadcrumb .act-label {
+  color: var(--ink-soft);
+}
+.app-topbar .spacer {
+  flex: 1;
+}
+.app-topbar .help {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  color: var(--ink-soft);
+  letter-spacing: 0.5px;
+}
+
+/* --- ToC --------------------------------------------------------------- */
+.app-toc {
+  grid-area: toc;
+  overflow-y: auto;
+  border-right: 1px solid var(--rule);
+  padding: 16px 12px 16px 24px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: var(--bg);
+}
+.app-toc h3 {
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+.app-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.app-toc .toc-act {
+  font-weight: 600;
+  color: var(--ink);
+  margin: 12px 0 4px;
+  cursor: default;
+}
+.app-toc .toc-family {
+  padding: 4px 0 4px 8px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 3px;
+}
+.app-toc .toc-family:hover {
+  background: rgba(14, 42, 47, 0.06);
+  color: var(--accent);
+}
+.app-toc .toc-family.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* --- stage ------------------------------------------------------------- */
+.app-stage {
+  grid-area: stage;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.card-frame {
+  width: 100%;
+  max-width: var(--card-w);
+  position: relative;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow:
+    0 1px 2px rgba(14, 42, 47, 0.06),
+    0 0 0 1px rgba(14, 42, 47, 0.08),
+    0 8px 30px rgba(14, 42, 47, 0.08);
+  overflow: hidden;
+  min-height: 380px;
+  will-change: transform, opacity;
+  transition:
+    transform 200ms ease-out,
+    opacity 200ms ease-out;
+}
+
+.card-face {
+  width: 100%;
+  background: var(--card-bg);
+}
+.card-face svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.card-face .face-meta {
+  padding: 10px 16px;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Front and back live inside one card-frame; we toggle which is visible
+   via a .mode-{front,back} class on the frame itself. */
+.card-frame.mode-front .face-back {
+  display: none;
+}
+.card-frame.mode-back .face-front {
+  display: none;
+}
+
+/* --- transitions ------------------------------------------------------- */
+.card-frame.tx-slide-right-in {
+  animation: slideRightIn 200ms ease-out;
+}
+.card-frame.tx-slide-left-in {
+  animation: slideLeftIn 200ms ease-out;
+}
+.card-frame.tx-flip-up-in {
+  animation: flipUpIn 200ms ease-out;
+}
+.card-frame.tx-flip-down-in {
+  animation: flipDownIn 200ms ease-out;
+}
+.card-frame.tx-fade-in {
+  animation: fadeIn 180ms ease-out;
+}
+.card-frame.tx-cross-act-in {
+  animation: fadeIn 400ms ease-out;
+}
+
+@keyframes slideRightIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeftIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes flipUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes flipDownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- title/closing pages ---------------------------------------------- */
+.title-page,
+.closing-page {
+  text-align: left;
+  padding: 32px 28px;
+  max-width: 560px;
+  width: 100%;
+}
+.title-page h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--accent);
+}
+.title-page .subtitle {
+  color: var(--ink-soft);
+  margin: 0 0 24px;
+  font-size: 15px;
+}
+.title-page .intro,
+.closing-page .intro {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 56ch;
+}
+.title-page .cta {
+  margin-top: 24px;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+.closing-page h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--accent);
+}
+
+/* --- bottom bar -------------------------------------------------------- */
+.app-bottombar {
+  grid-area: bot;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 24px;
+  border-top: 1px solid var(--rule);
+  background: var(--bg);
+}
+.app-bottombar button {
+  appearance: none;
+  border: 1px solid var(--rule);
+  background: var(--card-bg);
+  color: var(--accent);
+  width: 56px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 100ms ease;
+}
+.app-bottombar button:hover {
+  background: rgba(14, 42, 47, 0.05);
+}
+.app-bottombar button:active {
+  background: rgba(14, 42, 47, 0.1);
+}
+.app-bottombar .position {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  color: var(--ink-soft);
+  min-width: 80px;
+  text-align: center;
+}
+
+/* --- act overlay ------------------------------------------------------- */
+.act-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(247, 246, 241, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  pointer-events: none;
+  animation: actOverlay 600ms ease-out forwards;
+}
+.act-overlay .eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  color: var(--ink-soft);
+}
+.act-overlay h2 {
+  font-size: 26px;
+  margin: 8px 0 0;
+  color: var(--accent);
+}
+@keyframes actOverlay {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* --- spectral 4D animation -------------------------------------------- */
+.spectral-anim {
+  padding: 14px 18px;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  color: var(--ink);
+  background: var(--card-bg);
+  border-top: 1px solid var(--rule);
+}
+.spectral-anim__lines {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.spectral-anim__lines > div {
+  color: var(--ink);
+}
+.spectral-anim__tag {
+  display: inline-block;
+  width: 22px;
+  color: var(--accent);
+  font-weight: 600;
+}
+.spectral-anim__branch {
+  margin: 4px 0 8px;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 10px;
+}
+.spectral-anim__branch--schematic {
+  color: #b89a3a;
+}
+.spectral-anim__rate {
+  margin: 4px 0 12px;
+  color: var(--ink-soft);
+  font-size: 10px;
+}
+.spectral-anim__canvas-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.spectral-anim__canvas {
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid var(--rule);
+  background: var(--card-bg);
+  image-rendering: pixelated;
+}
+.spectral-anim__phase {
+  color: var(--ink-soft);
+  font-size: 10px;
+}

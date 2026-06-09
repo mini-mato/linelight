@@ -1,0 +1,703 @@
+{
+  "$schema": "atlas/primitive[family=spectral-line]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Every spectral line in src/data/elements/{H,He,Hg,Na,Ne}.ts mirrored as an atlas primitive. Wavelengths are vacuum (NIST ASD primary). Einstein A coefficients and oscillator strengths are NOT in src/data/elements/ — only NIST IDs them in their own table — so those fields are intentionally absent here. Set on a future ingest pass.",
+  "primitives": [
+    {
+      "id": "spectral-line.h.ly-beta",
+      "family": "spectral-line",
+      "name": "H Lyman β (n=3 → 1)",
+      "symbol": "Ly β",
+      "attrs": {
+        "wavelengthVacuumNm": 102.572,
+        "transitionType": "E1",
+        "seriesId": "series.h.lyman",
+        "upperLevelId": "energy-level.h.n3",
+        "lowerLevelId": "energy-level.h.n1"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.h.ly-alpha",
+      "family": "spectral-line",
+      "name": "H Lyman α (n=2 → 1)",
+      "symbol": "Ly α",
+      "attrs": {
+        "wavelengthVacuumNm": 121.567,
+        "transitionType": "E1",
+        "seriesId": "series.h.lyman",
+        "upperLevelId": "energy-level.h.n2",
+        "lowerLevelId": "energy-level.h.n1"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "Brightest UV emission of cosmic hydrogen."
+    },
+    {
+      "id": "spectral-line.h.h-delta",
+      "family": "spectral-line",
+      "name": "H Balmer δ (n=6 → 2)",
+      "symbol": "Hδ",
+      "attrs": {
+        "wavelengthVacuumNm": 410.174,
+        "transitionType": "E1",
+        "seriesId": "series.h.balmer",
+        "upperLevelId": "energy-level.h.n6",
+        "lowerLevelId": "energy-level.h.n2"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.h.h-gamma",
+      "family": "spectral-line",
+      "name": "H Balmer γ (n=5 → 2)",
+      "symbol": "Hγ",
+      "attrs": {
+        "wavelengthVacuumNm": 434.047,
+        "transitionType": "E1",
+        "seriesId": "series.h.balmer",
+        "upperLevelId": "energy-level.h.n5",
+        "lowerLevelId": "energy-level.h.n2"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.h.h-beta",
+      "family": "spectral-line",
+      "name": "H Balmer β (n=4 → 2)",
+      "symbol": "Hβ",
+      "attrs": {
+        "wavelengthVacuumNm": 486.135,
+        "transitionType": "E1",
+        "seriesId": "series.h.balmer",
+        "upperLevelId": "energy-level.h.n4",
+        "lowerLevelId": "energy-level.h.n2"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.h.h-alpha",
+      "family": "spectral-line",
+      "name": "H Balmer α (n=3 → 2)",
+      "symbol": "Hα",
+      "attrs": {
+        "wavelengthVacuumNm": 656.281,
+        "transitionType": "E1",
+        "seriesId": "series.h.balmer",
+        "upperLevelId": "energy-level.h.n3",
+        "lowerLevelId": "energy-level.h.n2"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "Red glow of star-forming nebulae."
+    },
+    {
+      "id": "spectral-line.h.pa-beta",
+      "family": "spectral-line",
+      "name": "H Paschen β (n=5 → 3)",
+      "symbol": "Pa β",
+      "attrs": {
+        "wavelengthVacuumNm": 1281.81,
+        "transitionType": "E1",
+        "seriesId": "series.h.paschen",
+        "upperLevelId": "energy-level.h.n5",
+        "lowerLevelId": "energy-level.h.n3"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.h.pa-alpha",
+      "family": "spectral-line",
+      "name": "H Paschen α (n=4 → 3)",
+      "symbol": "Pa α",
+      "attrs": {
+        "wavelengthVacuumNm": 1875.1,
+        "transitionType": "E1",
+        "seriesId": "series.h.paschen",
+        "upperLevelId": "energy-level.h.n4",
+        "lowerLevelId": "energy-level.h.n3"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.h.br-alpha",
+      "family": "spectral-line",
+      "name": "H Brackett α (n=5 → 4)",
+      "symbol": "Br α",
+      "attrs": {
+        "wavelengthVacuumNm": 4051.2,
+        "transitionType": "E1",
+        "seriesId": "series.h.brackett",
+        "upperLevelId": "energy-level.h.n5",
+        "lowerLevelId": "energy-level.h.n4"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.h.pf-alpha",
+      "family": "spectral-line",
+      "name": "H Pfund α (n=6 → 5)",
+      "symbol": "Pf α",
+      "attrs": {
+        "wavelengthVacuumNm": 7458.0,
+        "transitionType": "E1",
+        "seriesId": "series.h.pfund",
+        "upperLevelId": "energy-level.h.n6",
+        "lowerLevelId": "energy-level.h.n5"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.h.21cm",
+      "family": "spectral-line",
+      "name": "HI 21 cm (F=1 → 0 hyperfine)",
+      "symbol": "21 cm",
+      "attrs": {
+        "wavelengthVacuumNm": 211060000,
+        "transitionType": "M1",
+        "upperLevelId": "energy-level.h.n1.f1",
+        "lowerLevelId": "energy-level.h.n1.f0"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "1420 MHz spin-flip in n=1 ground state. Galactic HI tracer."
+    },
+    {
+      "id": "spectral-line.he.30-4",
+      "family": "spectral-line",
+      "name": "He II 30.4 (2p → 1s in He⁺)",
+      "symbol": "He II 30.4",
+      "attrs": {
+        "wavelengthVacuumNm": 30.4,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.he.heII.2p",
+        "lowerLevelId": "energy-level.he.heII.1s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "Singly ionized helium — solar EUV imager (SDO/AIA)."
+    },
+    {
+      "id": "spectral-line.he.388-9",
+      "family": "spectral-line",
+      "name": "He I 388.9 (3³P → 2³S)",
+      "symbol": "He 388.9",
+      "attrs": {
+        "wavelengthVacuumNm": 388.86,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.he.3-3p",
+        "lowerLevelId": "energy-level.he.2-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.he.447-1",
+      "family": "spectral-line",
+      "name": "He I 447.1 (4³D → 2³P)",
+      "symbol": "He 447.1",
+      "attrs": {
+        "wavelengthVacuumNm": 447.15,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.he.4-3d",
+        "lowerLevelId": "energy-level.he.2-3p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.he.471-3",
+      "family": "spectral-line",
+      "name": "He I 471.3 (4³S → 2³P)",
+      "symbol": "He 471.3",
+      "attrs": {
+        "wavelengthVacuumNm": 471.31,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.he.4-3s",
+        "lowerLevelId": "energy-level.he.2-3p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.he.492-2",
+      "family": "spectral-line",
+      "name": "He I 492.2 (4¹D → 2¹P)",
+      "symbol": "He 492.2",
+      "attrs": {
+        "wavelengthVacuumNm": 492.19,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.he.4-1d",
+        "lowerLevelId": "energy-level.he.2-1p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.he.501-6",
+      "family": "spectral-line",
+      "name": "He I 501.6 (3¹P → 2¹S)",
+      "symbol": "He 501.6",
+      "attrs": {
+        "wavelengthVacuumNm": 501.57,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.he.3-1p",
+        "lowerLevelId": "energy-level.he.2-1s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.he.d3",
+      "family": "spectral-line",
+      "name": "He I D₃ (3³D → 2³P)",
+      "symbol": "D₃",
+      "attrs": {
+        "wavelengthVacuumNm": 587.56,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.he.3-3d",
+        "lowerLevelId": "energy-level.he.2-3p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "The line that named helium."
+    },
+    {
+      "id": "spectral-line.he.667-8",
+      "family": "spectral-line",
+      "name": "He I 667.8 (3¹D → 2¹P)",
+      "symbol": "He 667.8",
+      "attrs": {
+        "wavelengthVacuumNm": 667.82,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.he.3-1d",
+        "lowerLevelId": "energy-level.he.2-1p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.he.706-5",
+      "family": "spectral-line",
+      "name": "He I 706.5 (3³S → 2³P)",
+      "symbol": "He 706.5",
+      "attrs": {
+        "wavelengthVacuumNm": 706.52,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.he.3-3s",
+        "lowerLevelId": "energy-level.he.2-3p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.he.1083",
+      "family": "spectral-line",
+      "name": "He I 1083 (2³P → 2³S)",
+      "symbol": "He 1083",
+      "attrs": {
+        "wavelengthVacuumNm": 1083.0,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.he.2-3p",
+        "lowerLevelId": "energy-level.he.2-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "Solar chromosphere triplet line. Coronal-hole magnetic-field tracer."
+    },
+    {
+      "id": "spectral-line.hg.185",
+      "family": "spectral-line",
+      "name": "Hg 185 (6¹P₁ → 6¹S₀)",
+      "symbol": "Hg 185",
+      "attrs": {
+        "wavelengthVacuumNm": 184.95,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.hg.6-1p1",
+        "lowerLevelId": "energy-level.hg.6-1s0"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "Ozone-producing UV resonance line."
+    },
+    {
+      "id": "spectral-line.hg.253",
+      "family": "spectral-line",
+      "name": "Hg 253.7 (6³P₁ → 6¹S₀)",
+      "symbol": "Hg 253.7",
+      "attrs": {
+        "wavelengthVacuumNm": 253.65,
+        "transitionType": "forbidden",
+        "seriesId": "series.hg.intercombination",
+        "upperLevelId": "energy-level.hg.6-3p1",
+        "lowerLevelId": "energy-level.hg.6-1s0"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "Germicidal UV-C. Spin-forbidden but enabled by spin-orbit mixing."
+    },
+    {
+      "id": "spectral-line.hg.365",
+      "family": "spectral-line",
+      "name": "Hg 365.0 (6³D → 6³P)",
+      "symbol": "Hg 365.0",
+      "attrs": {
+        "wavelengthVacuumNm": 365.02,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.hg.6-3d",
+        "lowerLevelId": "energy-level.hg.6-3p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.hg.405",
+      "family": "spectral-line",
+      "name": "Hg 404.7 (7³S → 6³P)",
+      "symbol": "Hg 404.7",
+      "attrs": {
+        "wavelengthVacuumNm": 404.66,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.hg.7-3s",
+        "lowerLevelId": "energy-level.hg.6-3p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.hg.436",
+      "family": "spectral-line",
+      "name": "Hg 435.8 (7³S → 6³P)",
+      "symbol": "Hg 435.8",
+      "attrs": {
+        "wavelengthVacuumNm": 435.83,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.hg.7-3s",
+        "lowerLevelId": "energy-level.hg.6-3p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.hg.546",
+      "family": "spectral-line",
+      "name": "Hg 546.1 (7³S → 6³P)",
+      "symbol": "Hg 546.1",
+      "attrs": {
+        "wavelengthVacuumNm": 546.07,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.hg.7-3s",
+        "lowerLevelId": "energy-level.hg.6-3p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.hg.577",
+      "family": "spectral-line",
+      "name": "Hg 577.0 (6³D → 6³P)",
+      "symbol": "Hg 577.0",
+      "attrs": {
+        "wavelengthVacuumNm": 577.0,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.hg.6-3d",
+        "lowerLevelId": "energy-level.hg.6-3p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.hg.579",
+      "family": "spectral-line",
+      "name": "Hg 579.1 (6³D → 6³P)",
+      "symbol": "Hg 579.1",
+      "attrs": {
+        "wavelengthVacuumNm": 579.07,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.hg.6-3d",
+        "lowerLevelId": "energy-level.hg.6-3p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.na.285",
+      "family": "spectral-line",
+      "name": "Na 285.3 (4²P → 3²S)",
+      "symbol": "Na 285.3",
+      "attrs": {
+        "wavelengthVacuumNm": 285.3,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.na.4-2p",
+        "lowerLevelId": "energy-level.na.3-2s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.na.330",
+      "family": "spectral-line",
+      "name": "Na 330.3 (4²P → 3²S)",
+      "symbol": "Na 330.3",
+      "attrs": {
+        "wavelengthVacuumNm": 330.26,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.na.4-2p",
+        "lowerLevelId": "energy-level.na.3-2s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.na.568",
+      "family": "spectral-line",
+      "name": "Na 568.3 (4²D → 3²P)",
+      "symbol": "Na 568.3",
+      "attrs": {
+        "wavelengthVacuumNm": 568.27,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.na.4-2d",
+        "lowerLevelId": "energy-level.na.3-2p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.na.d2",
+      "family": "spectral-line",
+      "name": "Na D₂ (3²P₃/₂ → 3²S₁/₂)",
+      "symbol": "D₂",
+      "attrs": {
+        "wavelengthVacuumNm": 588.995,
+        "transitionType": "E1",
+        "seriesId": "series.na.d-doublet",
+        "upperLevelId": "energy-level.na.3-2p3-2",
+        "lowerLevelId": "energy-level.na.3-2s1-2"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "Sodium D₂ — yellow streetlight workhorse."
+    },
+    {
+      "id": "spectral-line.na.d1",
+      "family": "spectral-line",
+      "name": "Na D₁ (3²P₁/₂ → 3²S₁/₂)",
+      "symbol": "D₁",
+      "attrs": {
+        "wavelengthVacuumNm": 589.592,
+        "transitionType": "E1",
+        "seriesId": "series.na.d-doublet",
+        "upperLevelId": "energy-level.na.3-2p1-2",
+        "lowerLevelId": "energy-level.na.3-2s1-2"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "Sodium D₁ — fine-structure partner of D₂."
+    },
+    {
+      "id": "spectral-line.na.818",
+      "family": "spectral-line",
+      "name": "Na 818.3 (3²D → 3²P)",
+      "symbol": "Na 818.3",
+      "attrs": {
+        "wavelengthVacuumNm": 818.33,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.na.3-2d",
+        "lowerLevelId": "energy-level.na.3-2p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.na.819",
+      "family": "spectral-line",
+      "name": "Na 819.5 (3²D → 3²P)",
+      "symbol": "Na 819.5",
+      "attrs": {
+        "wavelengthVacuumNm": 819.48,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.na.3-2d",
+        "lowerLevelId": "energy-level.na.3-2p"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.540",
+      "family": "spectral-line",
+      "name": "Ne 540.1 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 540.1",
+      "attrs": {
+        "wavelengthVacuumNm": 540.06,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.585",
+      "family": "spectral-line",
+      "name": "Ne 585.2 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 585.2",
+      "attrs": {
+        "wavelengthVacuumNm": 585.25,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.588",
+      "family": "spectral-line",
+      "name": "Ne 588.2 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 588.2",
+      "attrs": {
+        "wavelengthVacuumNm": 588.19,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.594",
+      "family": "spectral-line",
+      "name": "Ne 594.5 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 594.5",
+      "attrs": {
+        "wavelengthVacuumNm": 594.48,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.614",
+      "family": "spectral-line",
+      "name": "Ne 614.3 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 614.3",
+      "attrs": {
+        "wavelengthVacuumNm": 614.31,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.633",
+      "family": "spectral-line",
+      "name": "Ne 633.4 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 633.4",
+      "attrs": {
+        "wavelengthVacuumNm": 633.44,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.640",
+      "family": "spectral-line",
+      "name": "Ne 640.2 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 640.2",
+      "attrs": {
+        "wavelengthVacuumNm": 640.22,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.650",
+      "family": "spectral-line",
+      "name": "Ne 650.6 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 650.6",
+      "attrs": {
+        "wavelengthVacuumNm": 650.65,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.659",
+      "family": "spectral-line",
+      "name": "Ne 659.9 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 659.9",
+      "attrs": {
+        "wavelengthVacuumNm": 659.9,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.692",
+      "family": "spectral-line",
+      "name": "Ne 692.9 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 692.9",
+      "attrs": {
+        "wavelengthVacuumNm": 692.95,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.703",
+      "family": "spectral-line",
+      "name": "Ne 703.2 (2p⁵3p → 2p⁵3s)",
+      "symbol": "Ne 703.2",
+      "attrs": {
+        "wavelengthVacuumNm": 703.24,
+        "transitionType": "E1",
+        "upperLevelId": "energy-level.ne.2p5-3p",
+        "lowerLevelId": "energy-level.ne.2p5-3s"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02"
+    },
+    {
+      "id": "spectral-line.ne.ii-12-8um",
+      "family": "spectral-line",
+      "name": "[Ne II] 12.8 μm (²P₁/₂ → ²P₃/₂)",
+      "symbol": "[Ne II]",
+      "attrs": {
+        "wavelengthVacuumNm": 12810,
+        "transitionType": "M1",
+        "upperLevelId": "energy-level.ne.neII.2p1-2",
+        "lowerLevelId": "energy-level.ne.neII.2p3-2"
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "Ground-term fine-structure splitting in singly ionized neon. JWST/MIRI tracer of HII regions and AGN."
+    }
+  ]
+}

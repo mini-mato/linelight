@@ -1,0 +1,432 @@
+{
+  "$schema": "atlas/primitive[family=polytope]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Regular polytopes in d=2,3,4 plus n-parametric families. Vertex/edge/face/cell counts and Schlafli symbols from Coxeter (1973), Regular Polytopes, 3rd ed. Closed-form n-parametric formulas (n-simplex, n-cube, n-cross-polytope) are standard.",
+  "primitives": [
+    {
+      "id": "polytope.regular.2d.triangle",
+      "family": "polytope",
+      "name": "equilateral triangle",
+      "symbol": "{3}",
+      "attrs": {
+        "dimension": 2,
+        "schlafli": [3],
+        "vertices": 3,
+        "edges": 3,
+        "faces": 1
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Regular 3-gon. Coxeter 1973 ch. 1."
+    },
+    {
+      "id": "polytope.regular.2d.square",
+      "family": "polytope",
+      "name": "square",
+      "symbol": "{4}",
+      "attrs": {
+        "dimension": 2,
+        "schlafli": [4],
+        "vertices": 4,
+        "edges": 4,
+        "faces": 1
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Regular 4-gon. Coxeter 1973 ch. 1."
+    },
+    {
+      "id": "polytope.regular.2d.pentagon",
+      "family": "polytope",
+      "name": "regular pentagon",
+      "symbol": "{5}",
+      "attrs": {
+        "dimension": 2,
+        "schlafli": [5],
+        "vertices": 5,
+        "edges": 5,
+        "faces": 1
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Regular 5-gon. Coxeter 1973 ch. 1."
+    },
+    {
+      "id": "polytope.regular.2d.hexagon",
+      "family": "polytope",
+      "name": "regular hexagon",
+      "symbol": "{6}",
+      "attrs": {
+        "dimension": 2,
+        "schlafli": [6],
+        "vertices": 6,
+        "edges": 6,
+        "faces": 1
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Regular 6-gon. Coxeter 1973 ch. 1."
+    },
+    {
+      "id": "polytope.regular.2d.octagon",
+      "family": "polytope",
+      "name": "regular octagon",
+      "symbol": "{8}",
+      "attrs": {
+        "dimension": 2,
+        "schlafli": [8],
+        "vertices": 8,
+        "edges": 8,
+        "faces": 1
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Regular 8-gon. Coxeter 1973 ch. 1."
+    },
+    {
+      "id": "polytope.regular.2d.decagon",
+      "family": "polytope",
+      "name": "regular decagon",
+      "symbol": "{10}",
+      "attrs": {
+        "dimension": 2,
+        "schlafli": [10],
+        "vertices": 10,
+        "edges": 10,
+        "faces": 1
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Regular 10-gon. Coxeter 1973 ch. 1."
+    },
+    {
+      "id": "polytope.regular.2d.dodecagon",
+      "family": "polytope",
+      "name": "regular dodecagon",
+      "symbol": "{12}",
+      "attrs": {
+        "dimension": 2,
+        "schlafli": [12],
+        "vertices": 12,
+        "edges": 12,
+        "faces": 1
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Regular 12-gon. Coxeter 1973 ch. 1."
+    },
+    {
+      "id": "polytope.regular.2d.n-gon",
+      "family": "polytope",
+      "name": "regular n-gon",
+      "symbol": "{n}",
+      "attrs": {
+        "dimension": 2,
+        "schlafli": ["n"],
+        "formulas": {
+          "interior_angle": {
+            "latex": "\\theta = \\pi (n-2) / n",
+            "closedForm": "(n-2)*pi/n",
+            "reference": "Coxeter 1973 §1.5"
+          },
+          "circumradius": {
+            "latex": "R = a / (2 \\sin(\\pi/n))",
+            "closedForm": "a/(2*sin(pi/n))",
+            "reference": "Coxeter 1973 §1.5"
+          },
+          "area": {
+            "latex": "A = (n a^2 / 4) \\cot(\\pi/n)",
+            "closedForm": "n*a^2*cot(pi/n)/4",
+            "reference": "Coxeter 1973 §1.5"
+          }
+        }
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Parametric family. Limit n -> infinity yields a circle."
+    },
+    {
+      "id": "polytope.regular.3d.tetrahedron",
+      "family": "polytope",
+      "name": "tetrahedron",
+      "symbol": "{3,3}",
+      "attrs": {
+        "dimension": 3,
+        "schlafli": [3, 3],
+        "coxeter": "[3,3]",
+        "vertices": 4,
+        "edges": 6,
+        "faces": 4
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Platonic solid. Self-dual. Coxeter 1973 §1.7."
+    },
+    {
+      "id": "polytope.regular.3d.cube",
+      "family": "polytope",
+      "name": "cube",
+      "symbol": "{4,3}",
+      "attrs": {
+        "dimension": 3,
+        "schlafli": [4, 3],
+        "coxeter": "[4,3]",
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Platonic solid. Dual: octahedron. Coxeter 1973 §1.7."
+    },
+    {
+      "id": "polytope.regular.3d.octahedron",
+      "family": "polytope",
+      "name": "octahedron",
+      "symbol": "{3,4}",
+      "attrs": {
+        "dimension": 3,
+        "schlafli": [3, 4],
+        "coxeter": "[3,4]",
+        "vertices": 6,
+        "edges": 12,
+        "faces": 8
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Platonic solid. Dual: cube. Coxeter 1973 §1.7."
+    },
+    {
+      "id": "polytope.regular.3d.dodecahedron",
+      "family": "polytope",
+      "name": "dodecahedron",
+      "symbol": "{5,3}",
+      "attrs": {
+        "dimension": 3,
+        "schlafli": [5, 3],
+        "coxeter": "[5,3]",
+        "vertices": 20,
+        "edges": 30,
+        "faces": 12
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Platonic solid. Dual: icosahedron. Coxeter 1973 §1.7."
+    },
+    {
+      "id": "polytope.regular.3d.icosahedron",
+      "family": "polytope",
+      "name": "icosahedron",
+      "symbol": "{3,5}",
+      "attrs": {
+        "dimension": 3,
+        "schlafli": [3, 5],
+        "coxeter": "[3,5]",
+        "vertices": 12,
+        "edges": 30,
+        "faces": 20
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Platonic solid. Dual: dodecahedron. Coxeter 1973 §1.7."
+    },
+    {
+      "id": "polytope.regular.4d.5-cell",
+      "family": "polytope",
+      "name": "5-cell (4-simplex)",
+      "symbol": "{3,3,3}",
+      "attrs": {
+        "dimension": 4,
+        "schlafli": [3, 3, 3],
+        "coxeter": "[3,3,3]",
+        "vertices": 5,
+        "edges": 10,
+        "faces": 10,
+        "cells": 5
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "4-simplex. Self-dual. Cells: tetrahedra. Coxeter 1973 ch. 7-8."
+    },
+    {
+      "id": "polytope.regular.4d.tesseract",
+      "family": "polytope",
+      "name": "tesseract (8-cell)",
+      "symbol": "{4,3,3}",
+      "attrs": {
+        "dimension": 4,
+        "schlafli": [4, 3, 3],
+        "coxeter": "[4,3,3]",
+        "vertices": 16,
+        "edges": 32,
+        "faces": 24,
+        "cells": 8
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "4-cube. Dual: 16-cell. Cells: cubes. Coxeter 1973 ch. 7."
+    },
+    {
+      "id": "polytope.regular.4d.16-cell",
+      "family": "polytope",
+      "name": "16-cell (4-orthoplex)",
+      "symbol": "{3,3,4}",
+      "attrs": {
+        "dimension": 4,
+        "schlafli": [3, 3, 4],
+        "coxeter": "[3,3,4]",
+        "vertices": 8,
+        "edges": 24,
+        "faces": 32,
+        "cells": 16
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "4-cross-polytope. Dual: tesseract. Cells: tetrahedra. Coxeter 1973 ch. 7."
+    },
+    {
+      "id": "polytope.regular.4d.24-cell",
+      "family": "polytope",
+      "name": "24-cell",
+      "symbol": "{3,4,3}",
+      "attrs": {
+        "dimension": 4,
+        "schlafli": [3, 4, 3],
+        "coxeter": "[3,4,3]",
+        "vertices": 24,
+        "edges": 96,
+        "faces": 96,
+        "cells": 24
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Self-dual. No 3D analogue. Cells: octahedra. Coxeter 1973 ch. 8."
+    },
+    {
+      "id": "polytope.regular.4d.120-cell",
+      "family": "polytope",
+      "name": "120-cell",
+      "symbol": "{5,3,3}",
+      "attrs": {
+        "dimension": 4,
+        "schlafli": [5, 3, 3],
+        "coxeter": "[5,3,3]",
+        "vertices": 600,
+        "edges": 1200,
+        "faces": 720,
+        "cells": 120
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Dual: 600-cell. Cells: dodecahedra. Coxeter 1973 ch. 8. Schlegel rendering pending; typeset card for v1."
+    },
+    {
+      "id": "polytope.regular.4d.600-cell",
+      "family": "polytope",
+      "name": "600-cell",
+      "symbol": "{3,3,5}",
+      "attrs": {
+        "dimension": 4,
+        "schlafli": [3, 3, 5],
+        "coxeter": "[3,3,5]",
+        "vertices": 120,
+        "edges": 720,
+        "faces": 1200,
+        "cells": 600
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Dual: 120-cell. Cells: tetrahedra. Coxeter 1973 ch. 8. Schlegel rendering pending; typeset card for v1."
+    },
+    {
+      "id": "polytope.regular.nd.n-simplex",
+      "family": "polytope",
+      "name": "n-simplex",
+      "symbol": "{3^(n-1)}",
+      "attrs": {
+        "dimension": "n",
+        "schlafli": [3, "n"],
+        "formulas": {
+          "k_face_count": {
+            "latex": "f_k = \\binom{n+1}{k+1}",
+            "closedForm": "C(n+1, k+1)",
+            "reference": "Coxeter 1973 §7.2"
+          },
+          "volume_unit_edge": {
+            "latex": "V = \\sqrt{n+1} / (n! \\cdot 2^{n/2})",
+            "closedForm": "sqrt(n+1)/(n! * 2^(n/2))",
+            "reference": "Coxeter 1973 §7.2"
+          },
+          "circumradius": {
+            "latex": "R = \\sqrt{n / (2(n+1))}",
+            "closedForm": "sqrt(n/(2*(n+1)))",
+            "reference": "Coxeter 1973 §7.2"
+          }
+        }
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Self-dual in every dimension. n+1 vertices."
+    },
+    {
+      "id": "polytope.regular.nd.n-cube",
+      "family": "polytope",
+      "name": "n-cube (hypercube)",
+      "symbol": "{4,3^(n-2)}",
+      "attrs": {
+        "dimension": "n",
+        "schlafli": [4, 3, "n"],
+        "formulas": {
+          "k_face_count": {
+            "latex": "f_k = 2^{n-k} \\binom{n}{k}",
+            "closedForm": "2^(n-k) * C(n, k)",
+            "reference": "Coxeter 1973 §7.2"
+          },
+          "vertex_count": {
+            "latex": "V = 2^n",
+            "closedForm": "2^n",
+            "reference": "Coxeter 1973 §7.2"
+          },
+          "volume_unit_edge": {
+            "latex": "V = a^n",
+            "closedForm": "a^n",
+            "reference": "Coxeter 1973 §7.2"
+          }
+        }
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Dual: n-cross-polytope. Coxeter 1973 §7.2."
+    },
+    {
+      "id": "polytope.regular.nd.n-cross-polytope",
+      "family": "polytope",
+      "name": "n-cross-polytope (orthoplex)",
+      "symbol": "{3^(n-2),4}",
+      "attrs": {
+        "dimension": "n",
+        "schlafli": [3, "n", 4],
+        "formulas": {
+          "k_face_count": {
+            "latex": "f_k = 2^{k+1} \\binom{n}{k+1}",
+            "closedForm": "2^(k+1) * C(n, k+1)",
+            "reference": "Coxeter 1973 §7.2"
+          },
+          "vertex_count": {
+            "latex": "V = 2n",
+            "closedForm": "2*n",
+            "reference": "Coxeter 1973 §7.2"
+          },
+          "volume_unit_edge": {
+            "latex": "V = 2^{n/2} / n!",
+            "closedForm": "2^(n/2)/n!",
+            "reference": "Coxeter 1973 §7.2"
+          }
+        }
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Dual: n-cube. Vertices at +/-e_i. Coxeter 1973 §7.2."
+    }
+  ]
+}

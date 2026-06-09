@@ -1,0 +1,138 @@
+{
+  "$schema": "atlas/primitive[family=constant]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Bootstrap seed: only the five SI-2019 EXACTLY-DEFINED constants. Every other constant (alpha, m_e, a_0, R_inf, mu_B, etc.) is fetched by tools/ingest_codata.py against https://physics.nist.gov/cuu/Constants/Table/allascii.txt and emitted to constants.codata-2022.json. Hand-typing uncertain values violates the accuracy floor.",
+  "constants": [
+    {
+      "id": "constant.codata-2022.c",
+      "family": "constant",
+      "name": "speed of light in vacuum",
+      "symbol": "c",
+      "attrs": {
+        "value": 299792458,
+        "unit": "m s^-1",
+        "exact": true,
+        "relativeUncertainty": 0,
+        "derivationLatex": "\\text{defined by SI redefinition (2019)}"
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Exact by SI definition since 2019. Defines the metre."
+    },
+    {
+      "id": "constant.codata-2022.h",
+      "family": "constant",
+      "name": "Planck constant",
+      "symbol": "h",
+      "attrs": {
+        "value": 6.62607015e-34,
+        "unit": "J s",
+        "exact": true,
+        "relativeUncertainty": 0,
+        "derivationLatex": "\\text{defined by SI redefinition (2019)}"
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Exact by SI definition since 2019. Defines the kilogram."
+    },
+    {
+      "id": "constant.codata-2022.e",
+      "family": "constant",
+      "name": "elementary charge",
+      "symbol": "e",
+      "attrs": {
+        "value": 1.602176634e-19,
+        "unit": "C",
+        "exact": true,
+        "relativeUncertainty": 0,
+        "derivationLatex": "\\text{defined by SI redefinition (2019)}"
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Exact by SI definition since 2019. Defines the ampere."
+    },
+    {
+      "id": "constant.codata-2022.k_B",
+      "family": "constant",
+      "name": "Boltzmann constant",
+      "symbol": "k_B",
+      "attrs": {
+        "value": 1.380649e-23,
+        "unit": "J K^-1",
+        "exact": true,
+        "relativeUncertainty": 0,
+        "derivationLatex": "\\text{defined by SI redefinition (2019)}"
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Exact by SI definition since 2019. Defines the kelvin."
+    },
+    {
+      "id": "constant.codata-2022.N_A",
+      "family": "constant",
+      "name": "Avogadro constant",
+      "symbol": "N_A",
+      "attrs": {
+        "value": 6.02214076e23,
+        "unit": "mol^-1",
+        "exact": true,
+        "relativeUncertainty": 0,
+        "derivationLatex": "\\text{defined by SI redefinition (2019)}"
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Exact by SI definition since 2019. Defines the mole."
+    },
+    {
+      "id": "constant.derived.hbar",
+      "family": "constant",
+      "name": "reduced Planck constant",
+      "symbol": "ℏ",
+      "attrs": {
+        "value": 1.0545718176461565e-34,
+        "unit": "J s",
+        "exact": true,
+        "relativeUncertainty": 0,
+        "derivationLatex": "\\hbar = h / (2\\pi)",
+        "derivedFromIds": ["constant.codata-2022.h"]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Exact (since h is exact); irrational due to 2pi but symbolically exact."
+    },
+    {
+      "id": "constant.derived.R-gas",
+      "family": "constant",
+      "name": "molar gas constant",
+      "symbol": "R",
+      "attrs": {
+        "value": 8.31446261815324,
+        "unit": "J mol^-1 K^-1",
+        "exact": true,
+        "relativeUncertainty": 0,
+        "derivationLatex": "R = N_A k_B",
+        "derivedFromIds": ["constant.codata-2022.N_A", "constant.codata-2022.k_B"]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Exact (product of two exact constants)."
+    }
+  ],
+  "pendingViaIngest": [
+    "constant.codata-2022.alpha",
+    "constant.codata-2022.m_e",
+    "constant.codata-2022.m_p",
+    "constant.codata-2022.m_n",
+    "constant.codata-2022.epsilon_0",
+    "constant.codata-2022.mu_0",
+    "constant.codata-2022.a_0",
+    "constant.codata-2022.E_h",
+    "constant.codata-2022.R_infinity",
+    "constant.codata-2022.Ry",
+    "constant.codata-2022.mu_B",
+    "constant.codata-2022.mu_N",
+    "constant.codata-2022.g_e",
+    "constant.codata-2022.G",
+    "constant.codata-2022.sigma_SB"
+  ]
+}

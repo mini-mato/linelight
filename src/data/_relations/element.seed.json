@@ -1,0 +1,87 @@
+{
+  "$schema": "atlas/primitive[family=element]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Neutral-atom records for the five elements with line data in src/data/elements/. Ground configurations + ionization energies sourced from NIST ASD; ground-term symbols + ionization energies from Sansonetti & Martin (2005) NIST Handbook of Basic Atomic Spectroscopic Data. Atomic masses from CODATA 2022 / IUPAC 2021 standard atomic weights.",
+  "primitives": [
+    {
+      "id": "element.h",
+      "family": "element",
+      "name": "hydrogen",
+      "symbol": "H",
+      "attrs": {
+        "z": 1,
+        "groundConfig": "1s¹",
+        "groundTerm": "²S_{1/2}",
+        "ionizationEnergyEV": 13.59843449,
+        "atomicMassU": 1.008
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Single electron — the Rydberg testbed."
+    },
+    {
+      "id": "element.he",
+      "family": "element",
+      "name": "helium",
+      "symbol": "He",
+      "attrs": {
+        "z": 2,
+        "groundConfig": "1s²",
+        "groundTerm": "¹S_0",
+        "ionizationEnergyEV": 24.587389,
+        "atomicMassU": 4.002602
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Closed K-shell. Singlet/triplet system separated by spin selection."
+    },
+    {
+      "id": "element.ne",
+      "family": "element",
+      "name": "neon",
+      "symbol": "Ne",
+      "attrs": {
+        "z": 10,
+        "groundConfig": "[He] 2s² 2p⁶",
+        "groundTerm": "¹S_0",
+        "ionizationEnergyEV": 21.564541,
+        "atomicMassU": 20.1797
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Closed-shell noble. Discharge-driven thicket of red-orange lines."
+    },
+    {
+      "id": "element.na",
+      "family": "element",
+      "name": "sodium",
+      "symbol": "Na",
+      "attrs": {
+        "z": 11,
+        "groundConfig": "[Ne] 3s¹",
+        "groundTerm": "²S_{1/2}",
+        "ionizationEnergyEV": 5.13907696,
+        "atomicMassU": 22.98976928
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "One valence electron — the canonical alkali. D-doublet at 589.0/589.6 nm."
+    },
+    {
+      "id": "element.hg",
+      "family": "element",
+      "name": "mercury",
+      "symbol": "Hg",
+      "attrs": {
+        "z": 80,
+        "groundConfig": "[Xe] 4f¹⁴ 5d¹⁰ 6s²",
+        "groundTerm": "¹S_0",
+        "ionizationEnergyEV": 10.437504,
+        "atomicMassU": 200.592
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Heavy atom — strong relativistic effects, strong spin-orbit mixing enables intercombination lines (253.65 nm)."
+    }
+  ]
+}

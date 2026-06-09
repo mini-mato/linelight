@@ -1,0 +1,127 @@
+{
+  "$schema": "atlas/primitive[family=series]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Spectral series. Hydrogen series (Lyman..Pfund) named for their lower principal level n_low; series limit = R_inf · (1/n_low²) corresponding to the n→infinity head. Series-limit wavelengths computed from the Rydberg formula 1/lambda = R(1/n_low^2) with R_H = 1.0967758e7 m^-1 (R_inf with reduced-mass correction for hydrogen). Na D doublet bundled as a fine-structure pair. Hg singlet + triplet series catalogued schematically (no closed-form limit; see notes).",
+  "primitives": [
+    {
+      "id": "series.h.lyman",
+      "family": "series",
+      "name": "Lyman series",
+      "symbol": "Ly",
+      "attrs": {
+        "elementId": "element.h",
+        "lowerN": 1,
+        "region": "UV",
+        "seriesLimitWavelengthNm": 91.1763,
+        "namedAfter": "Theodore Lyman, 1906",
+        "memberLineIds": ["spectral-line.h.ly-alpha", "spectral-line.h.ly-beta"]
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Lower level n=1 (ground). Series limit at the ionization threshold."
+    },
+    {
+      "id": "series.h.balmer",
+      "family": "series",
+      "name": "Balmer series",
+      "symbol": "H",
+      "attrs": {
+        "elementId": "element.h",
+        "lowerN": 2,
+        "region": "UV+visible",
+        "seriesLimitWavelengthNm": 364.705,
+        "namedAfter": "Johann Balmer, 1885",
+        "memberLineIds": [
+          "spectral-line.h.h-alpha",
+          "spectral-line.h.h-beta",
+          "spectral-line.h.h-gamma",
+          "spectral-line.h.h-delta"
+        ]
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Lower level n=2. Hα..Hδ are the visible workhorses of stellar spectroscopy."
+    },
+    {
+      "id": "series.h.paschen",
+      "family": "series",
+      "name": "Paschen series",
+      "symbol": "Pa",
+      "attrs": {
+        "elementId": "element.h",
+        "lowerN": 3,
+        "region": "near-IR",
+        "seriesLimitWavelengthNm": 820.5863,
+        "namedAfter": "Friedrich Paschen, 1908",
+        "memberLineIds": ["spectral-line.h.pa-alpha", "spectral-line.h.pa-beta"]
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Lower level n=3. Near-IR; visible in dust-obscured nebulae."
+    },
+    {
+      "id": "series.h.brackett",
+      "family": "series",
+      "name": "Brackett series",
+      "symbol": "Br",
+      "attrs": {
+        "elementId": "element.h",
+        "lowerN": 4,
+        "region": "mid-IR",
+        "seriesLimitWavelengthNm": 1458.82,
+        "namedAfter": "Frederick Brackett, 1922",
+        "memberLineIds": ["spectral-line.h.br-alpha"]
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Lower level n=4. Mid-IR; JWST regime."
+    },
+    {
+      "id": "series.h.pfund",
+      "family": "series",
+      "name": "Pfund series",
+      "symbol": "Pf",
+      "attrs": {
+        "elementId": "element.h",
+        "lowerN": 5,
+        "region": "mid-IR",
+        "seriesLimitWavelengthNm": 2278.9375,
+        "namedAfter": "August Pfund, 1924",
+        "memberLineIds": ["spectral-line.h.pf-alpha"]
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Lower level n=5. Mid-IR; rarely observed individually."
+    },
+    {
+      "id": "series.na.d-doublet",
+      "family": "series",
+      "name": "Na D doublet",
+      "symbol": "D",
+      "attrs": {
+        "elementId": "element.na",
+        "lowerN": 3,
+        "region": "visible",
+        "namedAfter": "Fraunhofer D lines",
+        "memberLineIds": ["spectral-line.na.d1", "spectral-line.na.d2"]
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Two-line fine-structure pair, not a Rydberg series. 3p→3s split by spin-orbit into ²P₃/₂ and ²P₁/₂. No closed-form series limit."
+    },
+    {
+      "id": "series.hg.intercombination",
+      "family": "series",
+      "name": "Hg intercombination (singlet↔triplet)",
+      "symbol": "S↔T",
+      "attrs": {
+        "elementId": "element.hg",
+        "region": "UV+visible",
+        "memberLineIds": ["spectral-line.hg.253"]
+      },
+      "sourceId": "nist-asd-v5.10",
+      "retrievedAt": "2026-05-04",
+      "notes": "Strong relativistic spin-orbit mixing makes the spin-forbidden 6³P₁→6¹S₀ at 253.65 nm one of mercury's brightest lines. Group label only — not a Rydberg series."
+    }
+  ]
+}

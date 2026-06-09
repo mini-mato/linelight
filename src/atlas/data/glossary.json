@@ -1,0 +1,186 @@
+{
+  "entries": {
+    "element": {
+      "term": "element",
+      "short": "a kind of atom, set by the number of protons in its nucleus (Z).",
+      "long": "An element is a chemical species defined by its atomic number Z. The atlas catalogs five — hydrogen, helium, neon, sodium, mercury — chosen for the variety of spectra they produce.",
+      "source": "NIST Atomic Spectra Database"
+    },
+    "ionization-energy": {
+      "term": "ionization energy",
+      "short": "the energy needed to remove one electron from a neutral atom.",
+      "long": "Measured in eV. Hydrogen: 13.598 eV. Mercury: 10.437 eV. The Lyman series of hydrogen converges at this threshold."
+    },
+    "spectral-line": {
+      "term": "spectral line",
+      "short": "a single emitted or absorbed wavelength tied to one atomic transition.",
+      "long": "A spectral line records the photon energy of an upper-to-lower level jump. The atlas stores vacuum wavelengths in nanometres, sourced from NIST ASD.",
+      "source": "NIST-ASD v5.10"
+    },
+    "wavelength": {
+      "term": "wavelength",
+      "short": "the spatial period of a light wave, usually in nanometres.",
+      "long": "Related to frequency by λν = c and to photon energy by E = hc/λ. Visible light spans roughly 380 to 750 nm."
+    },
+    "series": {
+      "term": "series",
+      "short": "a family of spectral lines sharing the same lower energy level.",
+      "long": "Hydrogen has Lyman (n_low=1), Balmer (2), Paschen (3), Brackett (4), Pfund (5). Lines within a series bunch toward a limit at the ionization edge."
+    },
+    "rydberg-formula": {
+      "term": "Rydberg formula",
+      "short": "1/λ = R(1/n_low² − 1/n_high²) for hydrogen-like emission.",
+      "long": "Predicts each hydrogen spectral line from two integers. R_H ≈ 1.097 × 10⁷ m⁻¹ includes the reduced-mass correction for hydrogen.",
+      "source": "Bransden-Joachain 2003 §2"
+    },
+    "energy-level": {
+      "term": "energy level",
+      "short": "one of the discrete energies a bound electron can have.",
+      "long": "Hydrogen's bound levels follow E_n = -13.598 eV / n². Multi-electron levels are labeled by term symbols and are coupled by spin-orbit and electron-electron interactions."
+    },
+    "ground-state": {
+      "term": "ground state",
+      "short": "the lowest energy level an atom can occupy.",
+      "long": "Hydrogen's ground state is 1s, ²S_{1/2}, at -13.598 eV. Atoms rest here unless excited by collisions, photons, or fields."
+    },
+    "term-symbol": {
+      "term": "term symbol",
+      "short": "the label ²S+¹L_J that names a coupled atomic energy level.",
+      "long": "Encodes total spin (2S+1), total orbital angular momentum (L = S, P, D, F, …), and their coupled total J. Sodium's D₂ upper level is 3²P_{3/2}."
+    },
+    "fine-structure": {
+      "term": "fine structure",
+      "short": "the small splitting of levels by spin-orbit coupling.",
+      "long": "Splits the sodium 3p level into ²P_{1/2} and ²P_{3/2}, producing the D₁/D₂ doublet 0.6 nm apart. Scales with α² for hydrogen-like ions."
+    },
+    "transition-type": {
+      "term": "transition type",
+      "short": "the multipole channel that drives a radiative jump.",
+      "long": "E1 (electric dipole), M1 (magnetic dipole), E2 (electric quadrupole), or forbidden. E1 is fastest; the others are suppressed by small powers of αZ or ka₀."
+    },
+    "forbidden-transition": {
+      "term": "forbidden transition",
+      "short": "a jump that violates the leading-order multipole selection rules.",
+      "long": "Strictly forbidden in pure LS coupling but often weakly allowed via spin-orbit mixing. Mercury's 253.65 nm 6³P₁→6¹S₀ is the canonical example."
+    },
+    "parity": {
+      "term": "parity",
+      "short": "whether a state is even or odd under inversion through the origin.",
+      "long": "E1 transitions flip parity; M1 and E2 preserve it. Parity is the most-cited single selection rule."
+    },
+    "constant": {
+      "term": "constant",
+      "short": "a physical quantity that does not vary with the system.",
+      "long": "Some constants are fixed exactly by the SI (c, h, e, k_B, N_A). Others, like α and m_e, are measured and carry CODATA uncertainties."
+    },
+    "si-base-unit": {
+      "term": "SI base unit",
+      "short": "one of the seven units of the International System.",
+      "long": "Metre, second, kelvin, mole, kilogram, ampere, candela. Since 2019 they are defined by fixing seven constants exactly.",
+      "source": "SI 2019 redefinition"
+    },
+    "fine-structure-constant": {
+      "term": "fine-structure constant α",
+      "short": "the dimensionless number α = e²/(4πε₀ℏc) ≈ 1/137.",
+      "long": "Sets the strength of the electromagnetic interaction at low energy. CODATA 2022: α = 7.2973525643(11) × 10⁻³.",
+      "source": "CODATA 2022"
+    },
+    "bohr-radius": {
+      "term": "Bohr radius a₀",
+      "short": "the natural length scale of atomic physics, a₀ ≈ 0.529 Å.",
+      "long": "Defined by a₀ = ℏ/(m_e c α). The most-probable radius of hydrogen's 1s state in the infinite-nucleus-mass limit.",
+      "source": "Bransden-Joachain 2003 §2.4"
+    },
+    "unit": {
+      "term": "unit",
+      "short": "a named quantity used to express a measured value.",
+      "long": "Different communities prefer different units for the same dimension — energy may be J, eV, cm⁻¹, Hz, or E_h depending on context."
+    },
+    "electronvolt": {
+      "term": "electronvolt (eV)",
+      "short": "the energy one electron gains crossing 1 V.",
+      "long": "1 eV = 1.602 176 634 × 10⁻¹⁹ J, exact since the 2019 SI redefinition fixed e. Convenient unit for atomic and molecular energies."
+    },
+    "wavenumber": {
+      "term": "wavenumber",
+      "short": "energy expressed as reciprocal length, usually cm⁻¹.",
+      "long": "Defined by ν̃ = E/(hc). 1 eV ≈ 8065.544 cm⁻¹. The spectroscopist's canonical energy proxy."
+    },
+    "identity": {
+      "term": "identity",
+      "short": "a closed-form equation tying physical quantities together.",
+      "long": "The atlas catalogues landmark identities: E = hν, E = hc/λ, λν = c, the Rydberg energy, the Bohr radius, and α's definition."
+    },
+    "planck-einstein": {
+      "term": "Planck-Einstein relation",
+      "short": "E = hν — a photon's energy is h times its frequency.",
+      "long": "Equivalently E = hc/λ. With h and c exact since 2019, the constant hc = 1239.842 eV·nm is exact to all decimals shown."
+    },
+    "special-function": {
+      "term": "special function",
+      "short": "a named solution to a recurring differential equation.",
+      "long": "Legendre, Laguerre, Hermite, Bessel, hypergeometric, and others. They form orthogonal bases for separable PDE solutions.",
+      "source": "NIST DLMF"
+    },
+    "orthogonality": {
+      "term": "orthogonality",
+      "short": "two functions integrate to zero against a chosen weight.",
+      "long": "For Legendre polynomials on [-1, 1]: ∫ P_m P_n dx = 2/(2n+1) δ_{mn}. Orthogonality lets a function be decomposed into a unique sum of basis functions."
+    },
+    "spherical-harmonic": {
+      "term": "spherical harmonic Y_l^m",
+      "short": "the orthogonal basis on the sphere indexed by l and m.",
+      "long": "Y_l^m(θ, φ) = √[(2l+1)/(4π) · (l-m)!/(l+m)!] P_l^m(cosθ) e^{imφ}. They give the angular part of hydrogen's wavefunction.",
+      "source": "NIST DLMF §14.30"
+    },
+    "coord-system": {
+      "term": "coordinate system",
+      "short": "a labeling of space that lets a PDE separate into pieces.",
+      "long": "Eleven systems R-separate the 3D Helmholtz equation. The hydrogen Stark effect, for instance, separates in parabolic coordinates, not in spherical.",
+      "source": "Morse & Feshbach 1953"
+    },
+    "polytope": {
+      "term": "polytope",
+      "short": "the higher-dimensional cousin of a polygon or polyhedron.",
+      "long": "Regular polytopes have congruent regular faces and identical vertex figures. They exist in every dimension; 4D has six, every dimension ≥ 5 has three.",
+      "source": "Coxeter 1973"
+    },
+    "platonic-solid": {
+      "term": "Platonic solid",
+      "short": "one of the five regular convex polyhedra in 3D.",
+      "long": "Tetrahedron {3,3}, cube {4,3}, octahedron {3,4}, dodecahedron {5,3}, icosahedron {3,5}. Paired by duality: cube↔octahedron, dodecahedron↔icosahedron, tetrahedron self-dual."
+    },
+    "lattice": {
+      "term": "lattice",
+      "short": "a discrete set of points repeating by translation.",
+      "long": "Specified by basis vectors. 2D has 5 Bravais classes; 3D has 14. The conventional cell records its axis lengths and angles.",
+      "source": "International Tables for Crystallography Vol. A"
+    },
+    "bravais-lattice": {
+      "term": "Bravais lattice",
+      "short": "one of the 14 unique 3D translational lattices.",
+      "long": "Classified by crystal system (cubic, tetragonal, orthorhombic, hexagonal, rhombohedral, monoclinic, triclinic) and centering (P, I, F, C)."
+    },
+    "tiling": {
+      "term": "tiling",
+      "short": "a covering of a space by repeating shapes without gaps.",
+      "long": "Regular tilings use one regular polygon with the same arrangement at every vertex. The Euclidean plane admits exactly three; the hyperbolic plane admits infinitely many.",
+      "source": "Coxeter 1973 ch. 4–5"
+    },
+    "curved-space": {
+      "term": "curved space",
+      "short": "a Riemannian manifold with nonzero curvature.",
+      "long": "The atlas restricts attention to constant-curvature model spaces: Euclidean (K=0), spherical (K=+1), and hyperbolic (K=-1)."
+    },
+    "symmetry-group": {
+      "term": "symmetry group",
+      "short": "the set of transformations that leave a structure unchanged.",
+      "long": "Discrete point groups label molecular symmetry; continuous Lie groups label gauge and rotational symmetries; space groups combine point operations with translations."
+    },
+    "lie-group": {
+      "term": "Lie group",
+      "short": "a continuous symmetry group with a smooth manifold structure.",
+      "long": "The classical series A_n = su(n+1), B_n = so(2n+1), C_n = sp(2n), D_n = so(2n) cover most physical symmetries; G₂, F₄, E₆, E₇, E₈ are exceptional."
+    }
+  }
+}

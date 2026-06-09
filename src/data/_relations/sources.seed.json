@@ -1,0 +1,139 @@
+{
+  "$schema": "atlas/source",
+  "retrievedAt": "2026-05-04",
+  "sources": [
+    {
+      "id": "codata-2022",
+      "citation": "Mohr, P. J., Newell, D. B., Taylor, B. N., & Tiesinga, E. (2024). CODATA recommended values of the fundamental physical constants: 2022.",
+      "doi": "10.1103/RevModPhys.97.025002",
+      "url": "https://physics.nist.gov/cuu/Constants/",
+      "license": "us-gov-work",
+      "version": "2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Canonical source for fundamental physical constants. Machine-readable table at https://physics.nist.gov/cuu/Constants/Table/allascii.txt."
+    },
+    {
+      "id": "nist-asd-v5.10",
+      "citation": "Kramida, A., Ralchenko, Yu., Reader, J., and NIST ASD Team (2023). NIST Atomic Spectra Database, ver. 5.10.",
+      "url": "https://physics.nist.gov/asd",
+      "license": "us-gov-work",
+      "version": "5.10",
+      "retrievedAt": "2026-05-02",
+      "notes": "Energy levels, lines, transition probabilities. Already in use via tools/ingest_nist.py."
+    },
+    {
+      "id": "nist-dlmf",
+      "citation": "Olver, F. W. J., Daalhuis, A. B. O., Lozier, D. W., Schneider, B. I., Boisvert, R. F., Clark, C. W., Miller, B. R., Saunders, B. V., Cohl, H. S., and McClain, M. A., eds. NIST Digital Library of Mathematical Functions.",
+      "url": "https://dlmf.nist.gov/",
+      "license": "us-gov-work",
+      "version": "1.2.x (current at retrieval)",
+      "retrievedAt": "2026-05-04",
+      "notes": "Special functions (Gamma, Bessel, Legendre, Hermite, Laguerre, Gegenbauer, hypergeometric). Stable section URLs (e.g. dlmf.nist.gov/14.30) used for citation grain per A5."
+    },
+    {
+      "id": "cie-015-2018",
+      "citation": "CIE 015:2018, Colorimetry, 4th ed. Commission Internationale de l'Eclairage.",
+      "url": "https://cie.co.at/publications/colorimetry-4th-edition",
+      "license": "cie-published-attribution-required",
+      "version": "4th-ed",
+      "retrievedAt": "2026-05-04",
+      "notes": "CIE 1931 2-deg standard observer CMFs. Used numerically; tabulated values widely available."
+    },
+    {
+      "id": "iec-61966-2-1",
+      "citation": "IEC 61966-2-1:1999, Multimedia systems and equipment - Colour measurement and management - Part 2-1: Colour management - Default RGB colour space - sRGB.",
+      "url": "https://webstore.iec.ch/publication/6169",
+      "license": "iec-licensed",
+      "version": "1999+amd1:2003",
+      "retrievedAt": "2026-05-04",
+      "notes": "sRGB matrix and EOTF for XYZ -> linear sRGB -> gamma-encoded sRGB pipeline."
+    },
+    {
+      "id": "ciddor-1996",
+      "citation": "Ciddor, P. E. (1996). Refractive index of air: new equations for the visible and near infrared. Applied Optics, 35(9), 1566-1573.",
+      "doi": "10.1364/AO.35.001566",
+      "license": "personal-copy",
+      "version": "1996",
+      "retrievedAt": "2026-05-04",
+      "notes": "Air<->vacuum default per cluster B5. Supersedes Edlen 1966 as IAU/NIST current standard."
+    },
+    {
+      "id": "edlen-1966",
+      "citation": "Edlen, B. (1966). The Refractive Index of Air. Metrologia, 2(2), 71-80.",
+      "doi": "10.1088/0026-1394/2/2/002",
+      "license": "personal-copy",
+      "version": "1966",
+      "retrievedAt": "2026-05-04",
+      "notes": "Didactic toggle alongside Ciddor 1996. Same retention pattern as Bruton 1996 vs CIE 1931."
+    },
+    {
+      "id": "coxeter-1973",
+      "citation": "Coxeter, H. S. M. (1973). Regular Polytopes (3rd ed.). Dover Publications. ISBN 978-0486614809.",
+      "license": "personal-copy",
+      "version": "3rd-ed",
+      "retrievedAt": "2026-05-04",
+      "notes": "Canonical reference for regular polytopes in all dimensions. Cite, do not paste."
+    },
+    {
+      "id": "itc-vol-a",
+      "citation": "Aroyo, M. I. (Ed.) (2016). International Tables for Crystallography Volume A: Space-group symmetry (6th ed.). Wiley. ISBN 978-0470974230.",
+      "url": "https://it.iucr.org/A/",
+      "license": "personal-copy",
+      "version": "6th-ed",
+      "retrievedAt": "2026-05-04",
+      "notes": "230 space groups, 32 crystallographic point groups, 14 Bravais lattices."
+    },
+    {
+      "id": "morse-feshbach-1953",
+      "citation": "Morse, P. M., & Feshbach, H. (1953). Methods of Theoretical Physics, Vol. I. McGraw-Hill.",
+      "license": "personal-copy",
+      "version": "1st-ed",
+      "retrievedAt": "2026-05-04",
+      "notes": "11 separable coordinate systems in 3-D (ch. 5). Stackel theorem and separability."
+    },
+    {
+      "id": "sansonetti-martin-2005",
+      "citation": "Sansonetti, J. E., & Martin, W. C. (2005). Handbook of Basic Atomic Spectroscopic Data. Journal of Physical and Chemical Reference Data, 34(4), 1559-2259.",
+      "doi": "10.1063/1.1800011",
+      "url": "https://physics.nist.gov/PhysRefData/Handbook/",
+      "license": "us-gov-work",
+      "version": "2005",
+      "retrievedAt": "2026-05-04",
+      "notes": "Ionization energies, persistent lines, ground configurations. NIST Handbook of basic atomic spectroscopic data."
+    },
+    {
+      "id": "bransden-joachain-2003",
+      "citation": "Bransden, B. H., & Joachain, C. J. (2003). Physics of Atoms and Molecules (2nd ed.). Pearson Education. ISBN 978-0582356924.",
+      "license": "personal-copy",
+      "version": "2nd-ed",
+      "retrievedAt": "2026-05-04",
+      "notes": "Hydrogen wavefunction derivation, term-symbol theory, Zeeman/Stark perturbation."
+    },
+    {
+      "id": "demtroder-2018",
+      "citation": "Demtroder, W. (2018). Atoms, Molecules and Photons (3rd ed.). Springer. ISBN 978-3662555217.",
+      "license": "personal-copy",
+      "version": "3rd-ed",
+      "retrievedAt": "2026-05-04",
+      "notes": "Line-broadening models (natural, Doppler, pressure). Laser/coherence physics for v2 photon animation."
+    },
+    {
+      "id": "bruton-1996",
+      "citation": "Bruton, D. (1996). Approximate RGB values for Visible Wavelengths. Stephen F. Austin State University.",
+      "url": "http://www.physics.sfasu.edu/astro/color/spectra.html",
+      "license": "fair-use",
+      "version": "1996",
+      "retrievedAt": "2026-04-01",
+      "notes": "Didactic color toggle. The familiar textbook colors of the Balmer plate. Never the default."
+    },
+    {
+      "id": "wyman-2013",
+      "citation": "Wyman, C., Sloan, P-P., & Shirley, P. (2013). Simple Analytic Approximations to the CIE XYZ Color Matching Functions. Journal of Computer Graphics Techniques, 2(2), 1-11.",
+      "url": "https://jcgt.org/published/0002/02/01/",
+      "license": "open-access",
+      "version": "2013",
+      "retrievedAt": "2026-05-04",
+      "notes": "Analytic approximation to CIE 1931 CMFs as a fallback when the full table is not desired."
+    }
+  ]
+}

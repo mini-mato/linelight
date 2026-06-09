@@ -1,0 +1,536 @@
+{
+  "$schema": "atlas/primitive[family=symmetry-group]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Two clusters: (a) crystallographic 3D point groups in Schoenflies notation, with orders from International Tables for Crystallography Vol. A; (b) classical Lie groups via their Dynkin diagrams (A_n=su(n+1), B_n=so(2n+1), C_n=sp(2n), D_n=so(2n)) plus the five exceptional series. Lie-group structure follows Coxeter (1973) and standard references.",
+  "primitives": [
+    {
+      "id": "symmetry-group.point.3d.c1",
+      "family": "symmetry-group",
+      "name": "C_1 (triclinic, no symmetry)",
+      "symbol": "C₁",
+      "attrs": {
+        "groupType": "point",
+        "order": 1
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Trivial group. Only the identity element."
+    },
+    {
+      "id": "symmetry-group.point.3d.ci",
+      "family": "symmetry-group",
+      "name": "C_i (centrosymmetric)",
+      "symbol": "Cᵢ",
+      "attrs": {
+        "groupType": "point",
+        "order": 2
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Inversion only: {E, i}."
+    },
+    {
+      "id": "symmetry-group.point.3d.cs",
+      "family": "symmetry-group",
+      "name": "C_s (one mirror)",
+      "symbol": "Cₛ",
+      "attrs": {
+        "groupType": "point",
+        "order": 2
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Single mirror plane: {E, σ}."
+    },
+    {
+      "id": "symmetry-group.point.3d.c2",
+      "family": "symmetry-group",
+      "name": "C_2",
+      "symbol": "C₂",
+      "attrs": {
+        "groupType": "point",
+        "order": 2
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Single 2-fold rotation axis."
+    },
+    {
+      "id": "symmetry-group.point.3d.c2v",
+      "family": "symmetry-group",
+      "name": "C_2v",
+      "symbol": "C₂ᵥ",
+      "attrs": {
+        "groupType": "point",
+        "order": 4
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "C_2 plus two vertical mirrors. Water (H₂O) molecule."
+    },
+    {
+      "id": "symmetry-group.point.3d.c2h",
+      "family": "symmetry-group",
+      "name": "C_2h",
+      "symbol": "C₂ₕ",
+      "attrs": {
+        "groupType": "point",
+        "order": 4
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "C_2 plus horizontal mirror; contains inversion."
+    },
+    {
+      "id": "symmetry-group.point.3d.c3",
+      "family": "symmetry-group",
+      "name": "C_3",
+      "symbol": "C₃",
+      "attrs": {
+        "groupType": "point",
+        "order": 3
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Single 3-fold axis."
+    },
+    {
+      "id": "symmetry-group.point.3d.c3v",
+      "family": "symmetry-group",
+      "name": "C_3v",
+      "symbol": "C₃ᵥ",
+      "attrs": {
+        "groupType": "point",
+        "order": 6
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "C_3 plus three vertical mirrors. NH₃ molecule."
+    },
+    {
+      "id": "symmetry-group.point.3d.d3",
+      "family": "symmetry-group",
+      "name": "D_3",
+      "symbol": "D₃",
+      "attrs": {
+        "groupType": "point",
+        "order": 6
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "C_3 plus three perpendicular C_2 axes."
+    },
+    {
+      "id": "symmetry-group.point.3d.d3h",
+      "family": "symmetry-group",
+      "name": "D_3h",
+      "symbol": "D₃ₕ",
+      "attrs": {
+        "groupType": "point",
+        "order": 12
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "D_3 plus horizontal mirror. BF₃ molecule."
+    },
+    {
+      "id": "symmetry-group.point.3d.d3d",
+      "family": "symmetry-group",
+      "name": "D_3d",
+      "symbol": "D₃d",
+      "attrs": {
+        "groupType": "point",
+        "order": 12
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "D_3 plus dihedral mirrors. Staggered ethane."
+    },
+    {
+      "id": "symmetry-group.point.3d.s4",
+      "family": "symmetry-group",
+      "name": "S_4",
+      "symbol": "S₄",
+      "attrs": {
+        "groupType": "point",
+        "order": 4
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "4-fold improper rotation only."
+    },
+    {
+      "id": "symmetry-group.point.3d.s6",
+      "family": "symmetry-group",
+      "name": "S_6",
+      "symbol": "S₆",
+      "attrs": {
+        "groupType": "point",
+        "order": 6
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "6-fold improper rotation; equivalent to C_3i."
+    },
+    {
+      "id": "symmetry-group.point.3d.t",
+      "family": "symmetry-group",
+      "name": "T (chiral tetrahedral)",
+      "symbol": "T",
+      "attrs": {
+        "groupType": "point",
+        "order": 12
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Rotational symmetries of the tetrahedron only."
+    },
+    {
+      "id": "symmetry-group.point.3d.t-d",
+      "family": "symmetry-group",
+      "name": "T_d (full tetrahedral)",
+      "symbol": "T_d",
+      "attrs": {
+        "groupType": "point",
+        "order": 24
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Full symmetry of regular tetrahedron. Methane (CH₄). Four C₃ axes through vertices, three S₄ through edge midpoints, six σ_d mirrors."
+    },
+    {
+      "id": "symmetry-group.point.3d.t-h",
+      "family": "symmetry-group",
+      "name": "T_h",
+      "symbol": "Tₕ",
+      "attrs": {
+        "groupType": "point",
+        "order": 24
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "T plus inversion. Pyrite crystal symmetry."
+    },
+    {
+      "id": "symmetry-group.point.3d.o",
+      "family": "symmetry-group",
+      "name": "O (chiral octahedral)",
+      "symbol": "O",
+      "attrs": {
+        "groupType": "point",
+        "order": 24
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Rotations of octahedron / cube without reflections."
+    },
+    {
+      "id": "symmetry-group.point.3d.o-h",
+      "family": "symmetry-group",
+      "name": "O_h (full octahedral)",
+      "symbol": "Oₕ",
+      "attrs": {
+        "groupType": "point",
+        "order": 48
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Full symmetry of cube/octahedron. SF₆ molecule. NaCl crystal."
+    },
+    {
+      "id": "symmetry-group.lie.a1",
+      "family": "symmetry-group",
+      "name": "A_1 ≅ su(2)",
+      "symbol": "A₁",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "A_1",
+        "dynkin": "o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Rank-1 simple Lie algebra. su(2) ≅ so(3) as algebras; SU(2) is the universal cover of SO(3). Spin-½."
+    },
+    {
+      "id": "symmetry-group.lie.a2",
+      "family": "symmetry-group",
+      "name": "A_2 ≅ su(3)",
+      "symbol": "A₂",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "A_2",
+        "dynkin": "o-o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Color SU(3) of QCD. Eightfold-way SU(3) flavor."
+    },
+    {
+      "id": "symmetry-group.lie.a3",
+      "family": "symmetry-group",
+      "name": "A_3 ≅ su(4) ≅ so(6)",
+      "symbol": "A₃",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "A_3",
+        "dynkin": "o-o-o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Exceptional isomorphism A_3 ≅ D_3."
+    },
+    {
+      "id": "symmetry-group.lie.a4",
+      "family": "symmetry-group",
+      "name": "A_4 ≅ su(5)",
+      "symbol": "A₄",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "A_4",
+        "dynkin": "o-o-o-o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Georgi-Glashow grand unified theory candidate."
+    },
+    {
+      "id": "symmetry-group.lie.a5",
+      "family": "symmetry-group",
+      "name": "A_5 ≅ su(6)",
+      "symbol": "A₅",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "A_5",
+        "dynkin": "o-o-o-o-o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "symmetry-group.lie.b2",
+      "family": "symmetry-group",
+      "name": "B_2 ≅ so(5)",
+      "symbol": "B₂",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "B_2",
+        "dynkin": "o=>o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Exceptional isomorphism B_2 ≅ C_2."
+    },
+    {
+      "id": "symmetry-group.lie.b3",
+      "family": "symmetry-group",
+      "name": "B_3 ≅ so(7)",
+      "symbol": "B₃",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "B_3",
+        "dynkin": "o-o=>o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "symmetry-group.lie.b4",
+      "family": "symmetry-group",
+      "name": "B_4 ≅ so(9)",
+      "symbol": "B₄",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "B_4",
+        "dynkin": "o-o-o=>o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "symmetry-group.lie.c2",
+      "family": "symmetry-group",
+      "name": "C_2 ≅ sp(4)",
+      "symbol": "C₂",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "C_2",
+        "dynkin": "o<=o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Symplectic group sp(4)."
+    },
+    {
+      "id": "symmetry-group.lie.c3",
+      "family": "symmetry-group",
+      "name": "C_3 ≅ sp(6)",
+      "symbol": "C₃",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "C_3",
+        "dynkin": "o-o<=o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "symmetry-group.lie.c4",
+      "family": "symmetry-group",
+      "name": "C_4 ≅ sp(8)",
+      "symbol": "C₄",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "C_4",
+        "dynkin": "o-o-o<=o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "symmetry-group.lie.d2",
+      "family": "symmetry-group",
+      "name": "D_2 ≅ so(4)",
+      "symbol": "D₂",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "D_2",
+        "dynkin": "o o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "D_2 is semisimple but not simple: D_2 ≅ A_1 × A_1. Hidden so(4) symmetry of the hydrogen atom."
+    },
+    {
+      "id": "symmetry-group.lie.d3",
+      "family": "symmetry-group",
+      "name": "D_3 ≅ so(6) ≅ su(4)",
+      "symbol": "D₃",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "D_3",
+        "dynkin": "o-o-o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Coincides with A_3."
+    },
+    {
+      "id": "symmetry-group.lie.d4",
+      "family": "symmetry-group",
+      "name": "D_4 ≅ so(8)",
+      "symbol": "D₄",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "D_4",
+        "dynkin": "o-o<o,o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Triality: outer automorphism group is S_3."
+    },
+    {
+      "id": "symmetry-group.lie.d5",
+      "family": "symmetry-group",
+      "name": "D_5 ≅ so(10)",
+      "symbol": "D₅",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "D_5",
+        "dynkin": "o-o-o<o,o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Pati-Salam-style GUT candidate."
+    },
+    {
+      "id": "symmetry-group.lie.g2",
+      "family": "symmetry-group",
+      "name": "G_2 (exceptional)",
+      "symbol": "G₂",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "G_2",
+        "dynkin": "o#o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Triple bond Dynkin. Automorphism group of the octonions."
+    },
+    {
+      "id": "symmetry-group.lie.f4",
+      "family": "symmetry-group",
+      "name": "F_4 (exceptional)",
+      "symbol": "F₄",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "F_4",
+        "dynkin": "o-o=>o-o"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Rank 4. Double bond between nodes 2 and 3."
+    },
+    {
+      "id": "symmetry-group.lie.e6",
+      "family": "symmetry-group",
+      "name": "E_6 (exceptional)",
+      "symbol": "E₆",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "E_6",
+        "dynkin": "o-o-o-o-o with branch at node 3"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Rank 6, dimension 78. GUT candidate."
+    },
+    {
+      "id": "symmetry-group.lie.e7",
+      "family": "symmetry-group",
+      "name": "E_7 (exceptional)",
+      "symbol": "E₇",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "E_7",
+        "dynkin": "o-o-o-o-o-o with branch at node 3"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Rank 7, dimension 133."
+    },
+    {
+      "id": "symmetry-group.lie.e8",
+      "family": "symmetry-group",
+      "name": "E_8 (exceptional)",
+      "symbol": "E₈",
+      "attrs": {
+        "groupType": "lie",
+        "order": "inf",
+        "lieAlgebraType": "E_8",
+        "dynkin": "o-o-o-o-o-o-o with branch at node 3"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Rank 8, dimension 248. Largest exceptional simple Lie algebra."
+    }
+  ]
+}

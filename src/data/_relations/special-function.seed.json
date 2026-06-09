@@ -1,0 +1,232 @@
+{
+  "$schema": "atlas/primitive[family=special-function]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Math primitives for the special-function cluster. Definitions, recurrences, and orthogonality weights from NIST DLMF (https://dlmf.nist.gov). Section URLs in `notes` field per cluster A5 citation grain. Render uses inline TS implementations (Lanczos Γ, series+asymptotic Bessel, Bonnet/recursion-based orthogonal polynomials).",
+  "primitives": [
+    {
+      "id": "special-function.gamma",
+      "family": "special-function",
+      "name": "Gamma function",
+      "symbol": "Γ",
+      "attrs": {
+        "definingEquation": "Γ(z) = ∫₀^∞ t^(z-1) e^(-t) dt,  Re(z) > 0",
+        "recurrence": "Γ(z+1) = z Γ(z)",
+        "orthogonalityWeight": "n/a",
+        "parameters": ["z"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §5.2 (https://dlmf.nist.gov/5.2). Renderer uses Lanczos g=7 approximation; reflection formula handles Re(z) < 1/2."
+    },
+    {
+      "id": "special-function.beta",
+      "family": "special-function",
+      "name": "Beta function",
+      "symbol": "Β",
+      "attrs": {
+        "definingEquation": "Β(p,q) = ∫₀¹ t^(p-1) (1-t)^(q-1) dt = Γ(p)Γ(q)/Γ(p+q)",
+        "recurrence": "Β(p,q+1) = (q/(p+q)) Β(p,q)",
+        "orthogonalityWeight": "n/a",
+        "parameters": ["p", "q"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §5.12 (https://dlmf.nist.gov/5.12). Plotted as Β(x, 2) on x ∈ (0, 4]."
+    },
+    {
+      "id": "special-function.bessel.j",
+      "family": "special-function",
+      "name": "Bessel function of the first kind",
+      "symbol": "J_n",
+      "attrs": {
+        "definingEquation": "x² y'' + x y' + (x² - n²) y = 0  →  y = J_n(x)",
+        "recurrence": "J_{n-1}(x) + J_{n+1}(x) = (2n/x) J_n(x)",
+        "orthogonalityWeight": "x on (0, ∞) with Bessel zeros",
+        "parameters": ["n", "x"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §10.2-10.6 (https://dlmf.nist.gov/10.2). Plot shows J_0, J_1, J_2 on x ∈ [0, 20]. Implementation: power series for |x| < 12, Hankel asymptotic above."
+    },
+    {
+      "id": "special-function.bessel.y",
+      "family": "special-function",
+      "name": "Bessel function of the second kind",
+      "symbol": "Y_n",
+      "attrs": {
+        "definingEquation": "x² y'' + x y' + (x² - n²) y = 0  →  y = Y_n(x)",
+        "recurrence": "Y_{n-1}(x) + Y_{n+1}(x) = (2n/x) Y_n(x)",
+        "orthogonalityWeight": "x on (0, ∞) with Bessel zeros",
+        "parameters": ["n", "x"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §10.2 (https://dlmf.nist.gov/10.2). Logarithmic singularity at x → 0+. Plot shows Y_0, Y_1 on x ∈ [0.5, 20]."
+    },
+    {
+      "id": "special-function.bessel.i",
+      "family": "special-function",
+      "name": "Modified Bessel function of the first kind",
+      "symbol": "I_n",
+      "attrs": {
+        "definingEquation": "x² y'' + x y' - (x² + n²) y = 0  →  y = I_n(x)",
+        "recurrence": "I_{n-1}(x) - I_{n+1}(x) = (2n/x) I_n(x)",
+        "orthogonalityWeight": "n/a (exponentially growing)",
+        "parameters": ["n", "x"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §10.25 (https://dlmf.nist.gov/10.25). Plot shows I_0, I_1 on x ∈ [0, 4]."
+    },
+    {
+      "id": "special-function.bessel.k",
+      "family": "special-function",
+      "name": "Modified Bessel function of the second kind",
+      "symbol": "K_n",
+      "attrs": {
+        "definingEquation": "x² y'' + x y' - (x² + n²) y = 0  →  y = K_n(x)",
+        "recurrence": "K_{n-1}(x) - K_{n+1}(x) = -(2n/x) K_n(x)",
+        "orthogonalityWeight": "n/a (decays at ∞)",
+        "parameters": ["n", "x"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §10.25 (https://dlmf.nist.gov/10.25). Asymptotic K_n(x) ~ √(π/2x) e^(-x) used for x > 5; series elsewhere."
+    },
+    {
+      "id": "special-function.legendre.p",
+      "family": "special-function",
+      "name": "Legendre polynomial P_n(x)",
+      "symbol": "P_n",
+      "attrs": {
+        "definingEquation": "(1-x²) y'' - 2x y' + n(n+1) y = 0",
+        "recurrence": "(n+1) P_{n+1}(x) = (2n+1) x P_n(x) - n P_{n-1}(x)   (Bonnet)",
+        "orthogonalityWeight": "1 on [-1, 1];  ∫_{-1}^{1} P_m P_n dx = 2/(2n+1) δ_{mn}",
+        "parameters": ["n", "x"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §14.7 (https://dlmf.nist.gov/14.7). Plot shows P_2, P_3, P_4 on x ∈ [-1, 1]."
+    },
+    {
+      "id": "special-function.legendre.q",
+      "family": "special-function",
+      "name": "Legendre function of the second kind Q_n(x)",
+      "symbol": "Q_n",
+      "attrs": {
+        "definingEquation": "(1-x²) y'' - 2x y' + n(n+1) y = 0,  second linearly-independent solution",
+        "recurrence": "(n+1) Q_{n+1}(x) = (2n+1) x Q_n(x) - n Q_{n-1}(x)",
+        "orthogonalityWeight": "n/a (singular at x = ±1)",
+        "parameters": ["n", "x"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §14.7 (https://dlmf.nist.gov/14.7). Q_0(x) = ½ ln((1+x)/(1-x)). Plot shows Q_0, Q_1, Q_2 on x ∈ (-0.95, 0.95)."
+    },
+    {
+      "id": "special-function.legendre.p-assoc",
+      "family": "special-function",
+      "name": "Associated Legendre function P_l^m(x)",
+      "symbol": "P_l^m",
+      "attrs": {
+        "definingEquation": "(1-x²) y'' - 2x y' + [l(l+1) - m²/(1-x²)] y = 0",
+        "recurrence": "(l-m) P_l^m = x(2l-1) P_{l-1}^m - (l+m-1) P_{l-2}^m",
+        "orthogonalityWeight": "1 on [-1, 1] (fixed m); generates spherical harmonics via the φ phase factor",
+        "parameters": ["l", "m", "x"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §14.3, §14.10 (https://dlmf.nist.gov/14.3). Plot shows P_2^1 and P_3^2 on x ∈ [-1, 1]."
+    },
+    {
+      "id": "special-function.hermite",
+      "family": "special-function",
+      "name": "Hermite polynomial (physicists') H_n(x)",
+      "symbol": "H_n",
+      "attrs": {
+        "definingEquation": "y'' - 2x y' + 2n y = 0",
+        "recurrence": "H_{n+1}(x) = 2x H_n(x) - 2n H_{n-1}(x);  H_0 = 1, H_1 = 2x",
+        "orthogonalityWeight": "e^(-x²) on (-∞, ∞);  ∫ H_m H_n e^(-x²) dx = √π 2^n n! δ_{mn}",
+        "parameters": ["n", "x"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §18.5, §18.7 (https://dlmf.nist.gov/18.5). Physicists' (not probabilists') normalization. Plot shows H_2, H_3, H_4 on x ∈ [-3, 3]."
+    },
+    {
+      "id": "special-function.laguerre",
+      "family": "special-function",
+      "name": "Generalised Laguerre polynomial L_n^α(x)",
+      "symbol": "L_n^α",
+      "attrs": {
+        "definingEquation": "x y'' + (α + 1 - x) y' + n y = 0",
+        "recurrence": "(n+1) L_{n+1}^α = (2n + 1 + α - x) L_n^α - (n + α) L_{n-1}^α",
+        "orthogonalityWeight": "x^α e^(-x) on (0, ∞);  ∫₀^∞ L_m^α L_n^α x^α e^(-x) dx = Γ(n+α+1)/n! δ_{mn}",
+        "parameters": ["n", "alpha", "x"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §18.3, §18.9 (https://dlmf.nist.gov/18.3). Hydrogen radial wavefunction uses L_{n-l-1}^{2l+1}. Plot shows L_1, L_2, L_3 (α=0) on x ∈ [0, 10]."
+    },
+    {
+      "id": "special-function.gegenbauer",
+      "family": "special-function",
+      "name": "Gegenbauer polynomial C_n^α(x)",
+      "symbol": "C_n^α",
+      "attrs": {
+        "definingEquation": "(1-x²) y'' - (2α + 1) x y' + n(n + 2α) y = 0",
+        "recurrence": "(n+1) C_{n+1}^α = 2(n + α) x C_n^α - (n + 2α - 1) C_{n-1}^α",
+        "orthogonalityWeight": "(1-x²)^(α-1/2) on [-1, 1]",
+        "parameters": ["n", "alpha", "x"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §18.7 (https://dlmf.nist.gov/18.7). Generalises Legendre (α=1/2) and Chebyshev (α=0,1). Plot shows C_2, C_3, C_4 (α=1/2) on x ∈ [-1, 1]."
+    },
+    {
+      "id": "special-function.spherical-harmonic",
+      "family": "special-function",
+      "name": "Spherical harmonic Y_l^m(θ, φ)",
+      "symbol": "Y_l^m",
+      "attrs": {
+        "definingEquation": "Y_l^m(θ,φ) = √[(2l+1)/(4π) · (l-m)!/(l+m)!] P_l^m(cos θ) e^(imφ)",
+        "recurrence": "via associated Legendre P_l^m recurrence (DLMF §14.10)",
+        "orthogonalityWeight": "sin θ dθ dφ on the unit sphere; ∫ Y_l^m* Y_{l'}^{m'} dΩ = δ_{ll'} δ_{mm'}",
+        "parameters": ["l", "m", "theta", "phi"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §14.30 (https://dlmf.nist.gov/14.30). Polar plot shows |Y_2^0(θ, 0)| rosette."
+    },
+    {
+      "id": "special-function.hypergeometric-2f1",
+      "family": "special-function",
+      "name": "Gauss hypergeometric ₂F₁(a, b; c; z)",
+      "symbol": "₂F₁",
+      "attrs": {
+        "definingEquation": "₂F₁(a,b;c;z) = Σ_{k=0}^∞ (a)_k (b)_k / (c)_k · z^k / k!,  |z| < 1",
+        "recurrence": "z(1-z) y'' + [c - (a+b+1)z] y' - a b y = 0",
+        "orthogonalityWeight": "n/a",
+        "parameters": ["a", "b", "c", "z"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §15 (https://dlmf.nist.gov/15). Plot shows ₂F₁(1/2, 1/2; 1; z) on z ∈ (-0.95, 0.95) — the complete elliptic integral kernel."
+    },
+    {
+      "id": "special-function.hypergeometric-1f1",
+      "family": "special-function",
+      "name": "Confluent hypergeometric ₁F₁(a; b; z)",
+      "symbol": "₁F₁",
+      "attrs": {
+        "definingEquation": "₁F₁(a;b;z) = Σ_{k=0}^∞ (a)_k / (b)_k · z^k / k!  (Kummer M)",
+        "recurrence": "z y'' + (b - z) y' - a y = 0  (Kummer's equation)",
+        "orthogonalityWeight": "n/a",
+        "parameters": ["a", "b", "z"]
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "DLMF §13 (https://dlmf.nist.gov/13). Plot shows ₁F₁(1; 2; z) = (e^z - 1)/z on z ∈ [-3, 3]."
+    }
+  ]
+}

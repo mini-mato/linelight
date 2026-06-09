@@ -1,0 +1,95 @@
+{
+  "$schema": "atlas/primitive[family=transition-type]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Multipole classification of bound-bound radiative transitions. Selection rules from Bransden & Joachain (2003), ch. 4 + 5. Renderer is schematic — real selection-rule application requires the full term-symbol couplings.",
+  "primitives": [
+    {
+      "id": "transition-type.e1",
+      "family": "transition-type",
+      "name": "electric dipole (E1)",
+      "symbol": "E1",
+      "attrs": {
+        "multipoleOrder": 1,
+        "parity": "odd",
+        "lifetimeOrderOfMagnitudeS": 1e-9,
+        "selectionRules": {
+          "deltaJ": "0, ±1 (J=0 → J=0 forbidden)",
+          "deltaMJ": "0, ±1",
+          "deltaL": "±1",
+          "deltaS": "0",
+          "parity": "changes",
+          "deltaN": "any"
+        },
+        "schematic": true
+      },
+      "sourceId": "bransden-joachain-2003",
+      "retrievedAt": "2026-05-04",
+      "notes": "Default fastest allowed transition. Lifetime ~ns. Most visible-band atomic lines are E1."
+    },
+    {
+      "id": "transition-type.m1",
+      "family": "transition-type",
+      "name": "magnetic dipole (M1)",
+      "symbol": "M1",
+      "attrs": {
+        "multipoleOrder": 1,
+        "parity": "even",
+        "lifetimeOrderOfMagnitudeS": 1e-3,
+        "selectionRules": {
+          "deltaJ": "0, ±1 (J=0 → J=0 forbidden)",
+          "deltaMJ": "0, ±1",
+          "deltaL": "0",
+          "deltaS": "0",
+          "parity": "preserved",
+          "deltaN": "0 (within same configuration)"
+        },
+        "schematic": true
+      },
+      "sourceId": "bransden-joachain-2003",
+      "retrievedAt": "2026-05-04",
+      "notes": "Suppressed by ~(αZ)² vs E1. Hyperfine transitions (HI 21 cm) and ground-term fine-structure transitions ([Ne II] 12.8 μm) are M1."
+    },
+    {
+      "id": "transition-type.e2",
+      "family": "transition-type",
+      "name": "electric quadrupole (E2)",
+      "symbol": "E2",
+      "attrs": {
+        "multipoleOrder": 2,
+        "parity": "even",
+        "lifetimeOrderOfMagnitudeS": 1,
+        "selectionRules": {
+          "deltaJ": "0, ±1, ±2 (J=0 → J=0,1 forbidden; ½ → ½ forbidden)",
+          "deltaMJ": "0, ±1, ±2",
+          "deltaL": "0, ±2",
+          "deltaS": "0",
+          "parity": "preserved",
+          "deltaN": "any"
+        },
+        "schematic": true
+      },
+      "sourceId": "bransden-joachain-2003",
+      "retrievedAt": "2026-05-04",
+      "notes": "Suppressed by ~(ka_0)² vs E1. Auroral [O I] 557.7 nm green line is E2."
+    },
+    {
+      "id": "transition-type.forbidden",
+      "family": "transition-type",
+      "name": "forbidden (no first-order multipole)",
+      "symbol": "F",
+      "attrs": {
+        "multipoleOrder": null,
+        "parity": "n/a",
+        "selectionRules": {
+          "deltaJ": "violates E1, M1, E2 simultaneously",
+          "deltaS": "may change (intercombination)",
+          "parity": "n/a"
+        },
+        "schematic": true
+      },
+      "sourceId": "bransden-joachain-2003",
+      "retrievedAt": "2026-05-04",
+      "notes": "Strictly forbidden in pure LS coupling, often weakly allowed via spin-orbit mixing. The Hg 253.65 nm 6³P₁→6¹S₀ line is forbidden by ΔS=0 but enabled by relativistic mixing."
+    }
+  ]
+}

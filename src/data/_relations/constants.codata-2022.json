@@ -1,0 +1,326 @@
+{
+  "$schema": "atlas/primitive[family=constant]",
+  "retrievedAt": "2026-05-04",
+  "source": "codata-2022",
+  "constants": [
+    {
+      "id": "constant.codata-2022.alpha",
+      "family": "constant",
+      "name": "fine-structure constant",
+      "symbol": "\u03b1",
+      "attrs": {
+        "value": 0.0072973525643,
+        "unit": "",
+        "exact": false,
+        "relativeUncertainty": 1.5073959909534913e-10,
+        "absoluteUncertainty": 1.1e-12
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.alpha-inv",
+      "family": "constant",
+      "name": "inverse fine-structure constant",
+      "symbol": "\u03b1^-1",
+      "attrs": {
+        "value": 137.035999177,
+        "unit": "",
+        "exact": false,
+        "relativeUncertainty": 1.532444038509599e-10,
+        "absoluteUncertainty": 2.1e-08
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.m_e",
+      "family": "constant",
+      "name": "electron mass",
+      "symbol": "m_e",
+      "attrs": {
+        "value": 9.1093837139e-31,
+        "unit": "kg",
+        "exact": false,
+        "relativeUncertainty": 3.0737534919376406e-10,
+        "absoluteUncertainty": 2.8e-40
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.m_p",
+      "family": "constant",
+      "name": "proton mass",
+      "symbol": "m_p",
+      "attrs": {
+        "value": 1.67262192595e-27,
+        "unit": "kg",
+        "exact": false,
+        "relativeUncertainty": 3.1088914472088803e-10,
+        "absoluteUncertainty": 5.2e-37
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.m_n",
+      "family": "constant",
+      "name": "neutron mass",
+      "symbol": "m_n",
+      "attrs": {
+        "value": 1.67492750056e-27,
+        "unit": "kg",
+        "exact": false,
+        "relativeUncertainty": 5.074846521510982e-10,
+        "absoluteUncertainty": 8.5e-37
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.epsilon_0",
+      "family": "constant",
+      "name": "vacuum electric permittivity",
+      "symbol": "\u03b5\u2080",
+      "attrs": {
+        "value": 8.8541878188e-12,
+        "unit": "F m^-1",
+        "exact": false,
+        "relativeUncertainty": 1.5811726932507522e-10,
+        "absoluteUncertainty": 1.4e-21
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.mu_0",
+      "family": "constant",
+      "name": "vacuum mag. permeability",
+      "symbol": "\u03bc\u2080",
+      "attrs": {
+        "value": 1.25663706127e-06,
+        "unit": "N A^-2",
+        "exact": false,
+        "relativeUncertainty": 1.59154943112909e-10,
+        "absoluteUncertainty": 2e-16
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.a_0",
+      "family": "constant",
+      "name": "Bohr radius",
+      "symbol": "a\u2080",
+      "attrs": {
+        "value": 5.29177210544e-11,
+        "unit": "m",
+        "exact": false,
+        "relativeUncertainty": 1.5495754232443817e-10,
+        "absoluteUncertainty": 8.2e-21
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.E_h",
+      "family": "constant",
+      "name": "Hartree energy",
+      "symbol": "E_h",
+      "attrs": {
+        "value": 4.359744722206e-18,
+        "unit": "J",
+        "exact": false,
+        "relativeUncertainty": 1.1009818936305137e-12,
+        "absoluteUncertainty": 4.8e-30
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.E_h-eV",
+      "family": "constant",
+      "name": "Hartree energy in eV",
+      "symbol": "E_h",
+      "attrs": {
+        "value": 27.211386245981,
+        "unit": "eV",
+        "exact": false,
+        "relativeUncertainty": 1.1024796652699332e-12,
+        "absoluteUncertainty": 3e-11
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.R_infinity",
+      "family": "constant",
+      "name": "Rydberg constant",
+      "symbol": "R_\u221e",
+      "attrs": {
+        "value": 10973731.568157,
+        "unit": "m^-1",
+        "exact": false,
+        "relativeUncertainty": 1.0935204606991638e-12,
+        "absoluteUncertainty": 1.2e-05
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.Ry",
+      "family": "constant",
+      "name": "Rydberg constant times hc in eV",
+      "symbol": "Ry",
+      "attrs": {
+        "value": 13.60569312299,
+        "unit": "eV",
+        "exact": false,
+        "relativeUncertainty": 1.1024796652699738e-12,
+        "absoluteUncertainty": 1.5e-11
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.mu_B",
+      "family": "constant",
+      "name": "Bohr magneton",
+      "symbol": "\u03bc_B",
+      "attrs": {
+        "value": 9.2740100657e-24,
+        "unit": "J T^-1",
+        "exact": false,
+        "relativeUncertainty": 3.127018387359394e-10,
+        "absoluteUncertainty": 2.9e-33
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.mu_B-eV-T",
+      "family": "constant",
+      "name": "Bohr magneton in eV/T",
+      "symbol": "\u03bc_B",
+      "attrs": {
+        "value": 5.7883817982e-05,
+        "unit": "eV T^-1",
+        "exact": false,
+        "relativeUncertainty": 3.109677389559448e-10,
+        "absoluteUncertainty": 1.8e-14
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.mu_N",
+      "family": "constant",
+      "name": "nuclear magneton",
+      "symbol": "\u03bc_N",
+      "attrs": {
+        "value": 5.0507837393e-27,
+        "unit": "J T^-1",
+        "exact": false,
+        "relativeUncertainty": 3.167825198197355e-10,
+        "absoluteUncertainty": 1.6e-36
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.g_e",
+      "family": "constant",
+      "name": "electron g factor",
+      "symbol": "g_e",
+      "attrs": {
+        "value": -2.00231930436092,
+        "unit": "",
+        "exact": false,
+        "relativeUncertainty": 1.7979150438990604e-13,
+        "absoluteUncertainty": 3.6e-13
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.G",
+      "family": "constant",
+      "name": "Newtonian constant of gravitation",
+      "symbol": "G",
+      "attrs": {
+        "value": 6.6743e-11,
+        "unit": "m^3 kg^-1 s^-2",
+        "exact": false,
+        "relativeUncertainty": 2.2474266964325848e-05,
+        "absoluteUncertainty": 1.5e-15
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.sigma_SB",
+      "family": "constant",
+      "name": "Stefan-Boltzmann constant",
+      "symbol": "\u03c3",
+      "attrs": {
+        "value": 5.670374419e-08,
+        "unit": "W m^-2 K^-4",
+        "exact": true,
+        "relativeUncertainty": 0.0,
+        "absoluteUncertainty": 0.0
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.r_e",
+      "family": "constant",
+      "name": "classical electron radius",
+      "symbol": "r_e",
+      "attrs": {
+        "value": 2.8179403205e-15,
+        "unit": "m",
+        "exact": false,
+        "relativeUncertainty": 4.613298551934326e-10,
+        "absoluteUncertainty": 1.3e-24
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.lambda_C",
+      "family": "constant",
+      "name": "Compton wavelength",
+      "symbol": "\u03bb_C",
+      "attrs": {
+        "value": 2.42631023538e-12,
+        "unit": "m",
+        "exact": false,
+        "relativeUncertainty": 3.132328211445605e-10,
+        "absoluteUncertainty": 7.6e-22
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    },
+    {
+      "id": "constant.codata-2022.sigma_T",
+      "family": "constant",
+      "name": "Thomson cross section",
+      "symbol": "\u03c3_T",
+      "attrs": {
+        "value": 6.6524587051e-29,
+        "unit": "m^2",
+        "exact": false,
+        "relativeUncertainty": 9.319862437096933e-10,
+        "absoluteUncertainty": 6.2e-38
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04"
+    }
+  ],
+  "missesCount": 1,
+  "misses": [
+    "^Wien displacement law constant$"
+  ]
+}

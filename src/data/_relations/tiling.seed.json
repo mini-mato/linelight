@@ -1,0 +1,116 @@
+{
+  "$schema": "atlas/primitive[family=tiling]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Regular tilings: 3 Euclidean 2D, iconic hyperbolic 2D samples on the Poincare disk, 1 Euclidean 3D honeycomb. Schlafli symbols and curvature classification per Coxeter (1973), Regular Polytopes, 3rd ed., chapters 4 and 5.",
+  "primitives": [
+    {
+      "id": "tiling.regular.2d.triangular",
+      "family": "tiling",
+      "name": "triangular tiling",
+      "symbol": "{3,6}",
+      "attrs": {
+        "dimension": 2,
+        "geometry": "euclidean",
+        "schlafli": [3, 6],
+        "vertexFigure": "3.3.3.3.3.3",
+        "dual": "tiling.regular.2d.hexagonal"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Six triangles meet at each vertex. Coxeter 1973 §4.5."
+    },
+    {
+      "id": "tiling.regular.2d.square",
+      "family": "tiling",
+      "name": "square tiling",
+      "symbol": "{4,4}",
+      "attrs": {
+        "dimension": 2,
+        "geometry": "euclidean",
+        "schlafli": [4, 4],
+        "vertexFigure": "4.4.4.4",
+        "dual": "tiling.regular.2d.square"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Self-dual. Four squares meet at each vertex. Coxeter 1973 §4.5."
+    },
+    {
+      "id": "tiling.regular.2d.hexagonal",
+      "family": "tiling",
+      "name": "hexagonal tiling",
+      "symbol": "{6,3}",
+      "attrs": {
+        "dimension": 2,
+        "geometry": "euclidean",
+        "schlafli": [6, 3],
+        "vertexFigure": "6.6.6",
+        "dual": "tiling.regular.2d.triangular"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Three hexagons meet at each vertex. Honeycomb pattern. Coxeter 1973 §4.5."
+    },
+    {
+      "id": "tiling.regular.2d.hyperbolic.7-3",
+      "family": "tiling",
+      "name": "order-3 heptagonal tiling",
+      "symbol": "{7,3}",
+      "attrs": {
+        "dimension": 2,
+        "geometry": "hyperbolic",
+        "schlafli": [7, 3],
+        "vertexFigure": "7.7.7"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Hyperbolic regular tiling. (1/7 + 1/3 < 1/2). Rendered on Poincare disk. Coxeter 1973 ch. 5."
+    },
+    {
+      "id": "tiling.regular.2d.hyperbolic.5-4",
+      "family": "tiling",
+      "name": "order-4 pentagonal tiling",
+      "symbol": "{5,4}",
+      "attrs": {
+        "dimension": 2,
+        "geometry": "hyperbolic",
+        "schlafli": [5, 4],
+        "vertexFigure": "5.5.5.5"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Hyperbolic regular tiling. Self-dual to {4,5}. Rendered on Poincare disk."
+    },
+    {
+      "id": "tiling.regular.2d.hyperbolic.3-7",
+      "family": "tiling",
+      "name": "order-7 triangular tiling",
+      "symbol": "{3,7}",
+      "attrs": {
+        "dimension": 2,
+        "geometry": "hyperbolic",
+        "schlafli": [3, 7],
+        "vertexFigure": "3.3.3.3.3.3.3"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Hyperbolic regular tiling. Dual of {7,3}. Rendered on Poincare disk."
+    },
+    {
+      "id": "tiling.regular.3d.cubic-honeycomb",
+      "family": "tiling",
+      "name": "cubic honeycomb",
+      "symbol": "{4,3,4}",
+      "attrs": {
+        "dimension": 3,
+        "geometry": "euclidean",
+        "schlafli": [4, 3, 4],
+        "cellType": "cube",
+        "vertexFigure": "octahedron"
+      },
+      "sourceId": "coxeter-1973",
+      "retrievedAt": "2026-05-04",
+      "notes": "Only regular 3D Euclidean honeycomb. Self-dual. Coxeter 1973 §4.7."
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "$schema": "atlas/primitive[family=lattice]",
+  "retrievedAt": "2026-05-04",
+  "comment": "5 Bravais lattices in 2D and 14 Bravais lattices in 3D. Crystal system + centering + conventional cell parameters from International Tables for Crystallography Volume A (ITC Vol A).",
+  "primitives": [
+    {
+      "id": "lattice.bravais.2d.oblique",
+      "family": "lattice",
+      "name": "oblique (2D)",
+      "symbol": "mp",
+      "attrs": {
+        "dimension": 2,
+        "bravaisClass": "oblique-P",
+        "pointGroup": "2",
+        "conventionalCell": { "a": 1, "b": 1.4, "c": 1, "gamma": 75 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "2D Bravais lattice. a != b, gamma != 90."
+    },
+    {
+      "id": "lattice.bravais.2d.rectangular",
+      "family": "lattice",
+      "name": "rectangular (2D)",
+      "symbol": "op",
+      "attrs": {
+        "dimension": 2,
+        "bravaisClass": "rectangular-P",
+        "pointGroup": "2mm",
+        "conventionalCell": { "a": 1, "b": 1.4, "c": 1, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "2D Bravais lattice. a != b, gamma = 90."
+    },
+    {
+      "id": "lattice.bravais.2d.centered-rectangular",
+      "family": "lattice",
+      "name": "centered rectangular (2D)",
+      "symbol": "oc",
+      "attrs": {
+        "dimension": 2,
+        "bravaisClass": "rectangular-C",
+        "pointGroup": "2mm",
+        "conventionalCell": { "a": 1, "b": 1.4, "c": 1, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "2D Bravais lattice. Rhombic / centered rectangular."
+    },
+    {
+      "id": "lattice.bravais.2d.hexagonal",
+      "family": "lattice",
+      "name": "hexagonal (2D)",
+      "symbol": "hp",
+      "attrs": {
+        "dimension": 2,
+        "bravaisClass": "hexagonal-P",
+        "pointGroup": "6mm",
+        "conventionalCell": { "a": 1, "b": 1, "c": 1, "gamma": 120 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "2D Bravais lattice. a = b, gamma = 120."
+    },
+    {
+      "id": "lattice.bravais.2d.square",
+      "family": "lattice",
+      "name": "square (2D)",
+      "symbol": "tp",
+      "attrs": {
+        "dimension": 2,
+        "bravaisClass": "square-P",
+        "pointGroup": "4mm",
+        "conventionalCell": { "a": 1, "b": 1, "c": 1, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "2D Bravais lattice. a = b, gamma = 90."
+    },
+    {
+      "id": "lattice.bravais.3d.cubic-p",
+      "family": "lattice",
+      "name": "simple cubic (cP)",
+      "symbol": "cP",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "cubic-P",
+        "pointGroup": "m-3m",
+        "conventionalCell": { "a": 1, "b": 1, "c": 1, "alpha": 90, "beta": 90, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Primitive cubic. a = b = c, alpha = beta = gamma = 90."
+    },
+    {
+      "id": "lattice.bravais.3d.cubic-i",
+      "family": "lattice",
+      "name": "body-centered cubic (cI / bcc)",
+      "symbol": "cI",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "cubic-I",
+        "pointGroup": "m-3m",
+        "conventionalCell": { "a": 1, "b": 1, "c": 1, "alpha": 90, "beta": 90, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Body-centered cubic. Lattice point at (0,0,0) and (1/2,1/2,1/2)."
+    },
+    {
+      "id": "lattice.bravais.3d.cubic-f",
+      "family": "lattice",
+      "name": "face-centered cubic (cF / fcc)",
+      "symbol": "cF",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "cubic-F",
+        "pointGroup": "m-3m",
+        "conventionalCell": { "a": 1, "b": 1, "c": 1, "alpha": 90, "beta": 90, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Face-centered cubic. Lattice points at corners + face centers."
+    },
+    {
+      "id": "lattice.bravais.3d.tetragonal-p",
+      "family": "lattice",
+      "name": "primitive tetragonal (tP)",
+      "symbol": "tP",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "tetragonal-P",
+        "pointGroup": "4/mmm",
+        "conventionalCell": { "a": 1, "b": 1, "c": 1.4, "alpha": 90, "beta": 90, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Primitive tetragonal. a = b != c, all angles 90."
+    },
+    {
+      "id": "lattice.bravais.3d.tetragonal-i",
+      "family": "lattice",
+      "name": "body-centered tetragonal (tI)",
+      "symbol": "tI",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "tetragonal-I",
+        "pointGroup": "4/mmm",
+        "conventionalCell": { "a": 1, "b": 1, "c": 1.4, "alpha": 90, "beta": 90, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Body-centered tetragonal."
+    },
+    {
+      "id": "lattice.bravais.3d.orthorhombic-p",
+      "family": "lattice",
+      "name": "primitive orthorhombic (oP)",
+      "symbol": "oP",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "orthorhombic-P",
+        "pointGroup": "mmm",
+        "conventionalCell": { "a": 1, "b": 1.3, "c": 1.6, "alpha": 90, "beta": 90, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Primitive orthorhombic. a != b != c, all angles 90."
+    },
+    {
+      "id": "lattice.bravais.3d.orthorhombic-i",
+      "family": "lattice",
+      "name": "body-centered orthorhombic (oI)",
+      "symbol": "oI",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "orthorhombic-I",
+        "pointGroup": "mmm",
+        "conventionalCell": { "a": 1, "b": 1.3, "c": 1.6, "alpha": 90, "beta": 90, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Body-centered orthorhombic."
+    },
+    {
+      "id": "lattice.bravais.3d.orthorhombic-f",
+      "family": "lattice",
+      "name": "face-centered orthorhombic (oF)",
+      "symbol": "oF",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "orthorhombic-F",
+        "pointGroup": "mmm",
+        "conventionalCell": { "a": 1, "b": 1.3, "c": 1.6, "alpha": 90, "beta": 90, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Face-centered orthorhombic."
+    },
+    {
+      "id": "lattice.bravais.3d.orthorhombic-c",
+      "family": "lattice",
+      "name": "base-centered orthorhombic (oC)",
+      "symbol": "oC",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "orthorhombic-C",
+        "pointGroup": "mmm",
+        "conventionalCell": { "a": 1, "b": 1.3, "c": 1.6, "alpha": 90, "beta": 90, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Base-centered (C-centered) orthorhombic."
+    },
+    {
+      "id": "lattice.bravais.3d.monoclinic-p",
+      "family": "lattice",
+      "name": "primitive monoclinic (mP)",
+      "symbol": "mP",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "monoclinic-P",
+        "pointGroup": "2/m",
+        "conventionalCell": { "a": 1, "b": 1.3, "c": 1.6, "alpha": 90, "beta": 105, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Primitive monoclinic. a != b != c, alpha = gamma = 90, beta != 90."
+    },
+    {
+      "id": "lattice.bravais.3d.monoclinic-c",
+      "family": "lattice",
+      "name": "base-centered monoclinic (mC)",
+      "symbol": "mC",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "monoclinic-C",
+        "pointGroup": "2/m",
+        "conventionalCell": { "a": 1, "b": 1.3, "c": 1.6, "alpha": 90, "beta": 105, "gamma": 90 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Base-centered monoclinic."
+    },
+    {
+      "id": "lattice.bravais.3d.triclinic-p",
+      "family": "lattice",
+      "name": "triclinic (aP)",
+      "symbol": "aP",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "triclinic-P",
+        "pointGroup": "-1",
+        "conventionalCell": { "a": 1, "b": 1.2, "c": 1.5, "alpha": 75, "beta": 85, "gamma": 100 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Triclinic primitive. All a, b, c, alpha, beta, gamma distinct."
+    },
+    {
+      "id": "lattice.bravais.3d.hexagonal-p",
+      "family": "lattice",
+      "name": "hexagonal (hP)",
+      "symbol": "hP",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "hexagonal-P",
+        "pointGroup": "6/mmm",
+        "conventionalCell": { "a": 1, "b": 1, "c": 1.6, "alpha": 90, "beta": 90, "gamma": 120 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Hexagonal primitive. a = b != c, alpha = beta = 90, gamma = 120."
+    },
+    {
+      "id": "lattice.bravais.3d.rhombohedral-r",
+      "family": "lattice",
+      "name": "rhombohedral (hR)",
+      "symbol": "hR",
+      "attrs": {
+        "dimension": 3,
+        "bravaisClass": "rhombohedral-R",
+        "pointGroup": "-3m",
+        "conventionalCell": { "a": 1, "b": 1, "c": 1, "alpha": 75, "beta": 75, "gamma": 75 }
+      },
+      "sourceId": "itc-vol-a",
+      "retrievedAt": "2026-05-04",
+      "notes": "Rhombohedral. a = b = c, alpha = beta = gamma != 90. Hexagonal axes alternative possible."
+    }
+  ]
+}

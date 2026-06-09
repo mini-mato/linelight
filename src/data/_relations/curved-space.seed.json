@@ -1,0 +1,160 @@
+{
+  "$schema": "atlas/primitive[family=curved-space]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Constant-curvature Riemannian model spaces. Euclidean E^n (K=0), spherical S^n (K=+1), hyperbolic H^n (K=-1). Metrics from NIST DLMF §1.6 (vectors and tensors), Bransden-Joachain (2003) for the central-potential context, and standard differential-geometry conventions. The line-element forms shown use unit curvature radius.",
+  "primitives": [
+    {
+      "id": "curved-space.euclidean.e1",
+      "family": "curved-space",
+      "name": "Euclidean line E^1",
+      "symbol": "E¹",
+      "attrs": {
+        "curvatureK": 0,
+        "dimension": 1,
+        "isotropy": "homogeneous",
+        "lineElement": "ds² = dx²",
+        "model": "real line ℝ",
+        "isometryGroupOrder": "inf"
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "Trivial flat 1-manifold. Isometry group is ℝ ⋊ ℤ₂ (translations and reflection)."
+    },
+    {
+      "id": "curved-space.euclidean.e2",
+      "family": "curved-space",
+      "name": "Euclidean plane E^2",
+      "symbol": "E²",
+      "attrs": {
+        "curvatureK": 0,
+        "dimension": 2,
+        "isotropy": "homogeneous, isotropic",
+        "lineElement": "ds² = dx² + dy²",
+        "model": "ℝ²",
+        "isometryGroupOrder": "inf"
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "Isometry group E(2) = ℝ² ⋊ O(2)."
+    },
+    {
+      "id": "curved-space.euclidean.e3",
+      "family": "curved-space",
+      "name": "Euclidean 3-space E^3",
+      "symbol": "E³",
+      "attrs": {
+        "curvatureK": 0,
+        "dimension": 3,
+        "isotropy": "homogeneous, isotropic",
+        "lineElement": "ds² = dx² + dy² + dz²",
+        "model": "ℝ³",
+        "isometryGroupOrder": "inf"
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "Default ambient space for non-relativistic physics. Isometry group E(3) = ℝ³ ⋊ O(3)."
+    },
+    {
+      "id": "curved-space.spherical.s1",
+      "family": "curved-space",
+      "name": "circle S^1",
+      "symbol": "S¹",
+      "attrs": {
+        "curvatureK": 1,
+        "dimension": 1,
+        "isotropy": "homogeneous",
+        "lineElement": "ds² = dθ²",
+        "model": "θ ∈ [0, 2π)",
+        "isometryGroupOrder": "inf"
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "Isometry group O(2). Universal cover of itself is ℝ via the exponential map."
+    },
+    {
+      "id": "curved-space.spherical.s2",
+      "family": "curved-space",
+      "name": "sphere S^2",
+      "symbol": "S²",
+      "attrs": {
+        "curvatureK": 1,
+        "dimension": 2,
+        "isotropy": "homogeneous, isotropic",
+        "lineElement": "ds² = dθ² + sin²θ dφ²",
+        "model": "unit sphere in ℝ³",
+        "isometryGroupOrder": "inf"
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "Isometry group O(3). Eigenfunctions of the Laplace-Beltrami operator are spherical harmonics Y_l^m."
+    },
+    {
+      "id": "curved-space.spherical.s3",
+      "family": "curved-space",
+      "name": "3-sphere S^3",
+      "symbol": "S³",
+      "attrs": {
+        "curvatureK": 1,
+        "dimension": 3,
+        "isotropy": "homogeneous, isotropic",
+        "lineElement": "ds² = dχ² + sin²χ (dθ² + sin²θ dφ²)",
+        "model": "unit sphere in ℝ⁴",
+        "isometryGroupOrder": "inf"
+      },
+      "sourceId": "bransden-joachain-2003",
+      "retrievedAt": "2026-05-04",
+      "notes": "S³ is the universal (double) cover of SO(3). As a Lie group, S³ ≅ SU(2) ≅ Spin(3). The hidden SO(4) symmetry of the hydrogen Coulomb problem realises S³ as the bound-state momentum manifold."
+    },
+    {
+      "id": "curved-space.hyperbolic.h1",
+      "family": "curved-space",
+      "name": "hyperbolic line H^1",
+      "symbol": "H¹",
+      "attrs": {
+        "curvatureK": -1,
+        "dimension": 1,
+        "isotropy": "homogeneous",
+        "lineElement": "ds² = dx²",
+        "model": "ℝ (degenerate; same as E^1)",
+        "isometryGroupOrder": "inf"
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "In one dimension constant-curvature is degenerate; H^1 is isometric to E^1. Retained for completeness."
+    },
+    {
+      "id": "curved-space.hyperbolic.h2",
+      "family": "curved-space",
+      "name": "hyperbolic plane H^2",
+      "symbol": "H²",
+      "attrs": {
+        "curvatureK": -1,
+        "dimension": 2,
+        "isotropy": "homogeneous, isotropic",
+        "lineElement": "ds² = dr² + sinh²r dφ²",
+        "model": "Poincaré disk, upper half-plane, hyperboloid",
+        "isometryGroupOrder": "inf"
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "Isometry group PSL(2,ℝ). Three standard models: Poincaré disk, upper half-plane, two-sheet hyperboloid in ℝ^{2,1}."
+    },
+    {
+      "id": "curved-space.hyperbolic.h3",
+      "family": "curved-space",
+      "name": "hyperbolic 3-space H^3",
+      "symbol": "H³",
+      "attrs": {
+        "curvatureK": -1,
+        "dimension": 3,
+        "isotropy": "homogeneous, isotropic",
+        "lineElement": "ds² = dr² + sinh²r (dθ² + sin²θ dφ²)",
+        "model": "Poincaré ball, upper half-space, two-sheet hyperboloid in ℝ^{3,1}",
+        "isometryGroupOrder": "inf"
+      },
+      "sourceId": "nist-dlmf",
+      "retrievedAt": "2026-05-04",
+      "notes": "Isometry group PSL(2,ℂ). The momentum-space manifold of the H-atom continuum (E>0) is H³."
+    }
+  ]
+}

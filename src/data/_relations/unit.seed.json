@@ -1,0 +1,258 @@
+{
+  "$schema": "atlas/primitive[family=unit]",
+  "retrievedAt": "2026-05-04",
+  "comment": "Atomic-physics-relevant units, with conversions to canonical SI. Dimension strings use M (mass), L (length), T (time), Θ (temperature), N (amount), I (current). All siFactor values from CODATA 2022 / SI-2019.",
+  "primitives": [
+    {
+      "id": "unit.energy.j",
+      "family": "unit",
+      "name": "joule",
+      "symbol": "J",
+      "attrs": {
+        "dimensionString": "M L^2 T^-2",
+        "quantity": "energy",
+        "siFactor": 1,
+        "conversions": [
+          { "expression": "1 J = 1 kg·m²·s⁻²" },
+          { "expression": "1 J = 6.241 509 074 × 10¹⁸ eV" }
+        ]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "SI derived unit of energy. Canonical for atlas energy storage."
+    },
+    {
+      "id": "unit.energy.ev",
+      "family": "unit",
+      "name": "electronvolt",
+      "symbol": "eV",
+      "attrs": {
+        "dimensionString": "M L^2 T^-2",
+        "quantity": "energy",
+        "siFactor": 1.602176634e-19,
+        "conversions": [
+          { "expression": "1 eV = 1.602 176 634 × 10⁻¹⁹ J   (exact)" },
+          { "expression": "1 eV = 8065.543 937 cm⁻¹" },
+          { "expression": "1 eV = 2.417 989 242 × 10¹⁴ Hz" }
+        ]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Exact since SI 2019: e = 1.602 176 634 × 10⁻¹⁹ C is exact."
+    },
+    {
+      "id": "unit.energy.hartree",
+      "family": "unit",
+      "name": "Hartree",
+      "symbol": "E_h",
+      "attrs": {
+        "dimensionString": "M L^2 T^-2",
+        "quantity": "energy",
+        "siFactor": 4.359744722206e-18,
+        "conversions": [
+          { "expression": "1 E_h = 4.359 744 722 2060 × 10⁻¹⁸ J" },
+          { "expression": "1 E_h = 27.211 386 245 988 eV" },
+          { "expression": "1 E_h = 2 Ry" }
+        ]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Atomic unit of energy. = 2·Ry."
+    },
+    {
+      "id": "unit.energy.cm-1",
+      "family": "unit",
+      "name": "wavenumber (reciprocal cm)",
+      "symbol": "cm^-1",
+      "attrs": {
+        "dimensionString": "L^-1",
+        "quantity": "wavenumber",
+        "reciprocal": true,
+        "siFactor": 100,
+        "conversions": [
+          { "expression": "1 cm⁻¹ = 100 m⁻¹" },
+          { "expression": "1 cm⁻¹ = 1.239 841 984 × 10⁻⁴ eV" },
+          { "expression": "1 cm⁻¹ ↔ 29 979.245 8 MHz   (× hc)" }
+        ]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Spectroscopist's canonical energy proxy: ν̃ = E/(hc)."
+    },
+    {
+      "id": "unit.frequency.hz",
+      "family": "unit",
+      "name": "hertz",
+      "symbol": "Hz",
+      "attrs": {
+        "dimensionString": "T^-1",
+        "quantity": "frequency",
+        "siFactor": 1,
+        "conversions": [
+          { "expression": "1 Hz = 1 s⁻¹" },
+          { "expression": "1 Hz ↔ 4.135 667 696 × 10⁻¹⁵ eV   (× h)" }
+        ]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "SI base derived. Energy ↔ frequency via E = hν."
+    },
+    {
+      "id": "unit.length.m",
+      "family": "unit",
+      "name": "metre",
+      "symbol": "m",
+      "attrs": {
+        "dimensionString": "L",
+        "quantity": "length",
+        "siFactor": 1,
+        "conversions": [
+          { "expression": "1 m = 1 m   (SI base; defined via c)" },
+          { "expression": "1 m = 10⁹ nm = 10¹⁰ Å" }
+        ]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "SI base. Defined since 1983 by fixing c = 299 792 458 m/s exactly."
+    },
+    {
+      "id": "unit.length.nm",
+      "family": "unit",
+      "name": "nanometre",
+      "symbol": "nm",
+      "attrs": {
+        "dimensionString": "L",
+        "quantity": "length",
+        "siFactor": 1e-9,
+        "conversions": [
+          { "expression": "1 nm = 10⁻⁹ m" },
+          { "expression": "1 nm = 10 Å" },
+          { "expression": "λ_nm  ↔  E_eV  via  E·λ = 1239.841 984 eV·nm" }
+        ]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Spectroscopy default for visible/UV wavelengths."
+    },
+    {
+      "id": "unit.length.angstrom",
+      "family": "unit",
+      "name": "ångström",
+      "symbol": "Å",
+      "attrs": {
+        "dimensionString": "L",
+        "quantity": "length",
+        "siFactor": 1e-10,
+        "conversions": [
+          { "expression": "1 Å = 10⁻¹⁰ m = 0.1 nm" },
+          { "expression": "a₀ ≈ 0.529 Å" }
+        ]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Conventional unit of atomic-scale length; not SI but accepted in spectroscopy."
+    },
+    {
+      "id": "unit.length.bohr",
+      "family": "unit",
+      "name": "Bohr radius",
+      "symbol": "a_0",
+      "attrs": {
+        "dimensionString": "L",
+        "quantity": "length",
+        "siFactor": 5.29177210544e-11,
+        "conversions": [
+          { "expression": "a₀ = 5.291 772 105 44 × 10⁻¹¹ m" },
+          { "expression": "a₀ = 0.529 177 210 544 Å" }
+        ]
+      },
+      "sourceId": "bransden-joachain-2003",
+      "retrievedAt": "2026-05-04",
+      "notes": "Atomic unit of length. ℏ/(m_e c α). Bransden-Joachain §2.4."
+    },
+    {
+      "id": "unit.energy.ry",
+      "family": "unit",
+      "name": "Rydberg energy",
+      "symbol": "Ry",
+      "attrs": {
+        "dimensionString": "M L^2 T^-2",
+        "quantity": "energy",
+        "siFactor": 2.1798723611035e-18,
+        "conversions": [
+          { "expression": "Ry = 13.605 693 122 99 eV" },
+          { "expression": "Ry = ½ E_h" },
+          { "expression": "Ry ↔ 109 737.315 681 60 cm⁻¹" }
+        ]
+      },
+      "sourceId": "bransden-joachain-2003",
+      "retrievedAt": "2026-05-04",
+      "notes": "Hydrogen ionization energy, infinite-mass limit. Bransden-Joachain §2.4."
+    },
+    {
+      "id": "unit.temperature.k",
+      "family": "unit",
+      "name": "kelvin",
+      "symbol": "K",
+      "attrs": {
+        "dimensionString": "Θ",
+        "quantity": "temperature",
+        "siFactor": 1,
+        "conversions": [
+          { "expression": "1 K ↔ 1.380 649 × 10⁻²³ J   (× k_B, exact)" },
+          { "expression": "1 K ↔ 8.617 333 262 × 10⁻⁵ eV" }
+        ]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "SI base. Boltzmann constant exact since SI 2019."
+    },
+    {
+      "id": "unit.amount.mol",
+      "family": "unit",
+      "name": "mole",
+      "symbol": "mol",
+      "attrs": {
+        "dimensionString": "N",
+        "quantity": "amount",
+        "siFactor": 1,
+        "conversions": [{ "expression": "1 mol ↔ 6.022 140 76 × 10²³ entities   (× N_A, exact)" }]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "SI base. N_A exact since SI 2019."
+    },
+    {
+      "id": "unit.area.barn",
+      "family": "unit",
+      "name": "barn",
+      "symbol": "b",
+      "attrs": {
+        "dimensionString": "L^2",
+        "quantity": "cross section",
+        "siFactor": 1e-28,
+        "conversions": [{ "expression": "1 b = 10⁻²⁸ m²" }, { "expression": "1 b = 100 fm²" }]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "Conventional cross-section unit in nuclear and atomic physics."
+    },
+    {
+      "id": "unit.time.s",
+      "family": "unit",
+      "name": "second",
+      "symbol": "s",
+      "attrs": {
+        "dimensionString": "T",
+        "quantity": "time",
+        "siFactor": 1,
+        "conversions": [
+          { "expression": "1 s = 9 192 631 770 periods of Cs-133 hyperfine transition" }
+        ]
+      },
+      "sourceId": "codata-2022",
+      "retrievedAt": "2026-05-04",
+      "notes": "SI base. Defined via Cs-133 hyperfine clock transition since 1967."
+    }
+  ]
+}
