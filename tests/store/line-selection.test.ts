@@ -15,13 +15,14 @@ import { parseTransition } from '../../src/physics/atomic'
 import type { LineSelection } from '../../src/types'
 
 describe('selection.line — default and round-trip', () => {
-  it('starts as null on a freshly-created store', () => {
+  it('starts with Hα focused on a freshly-created store', () => {
     const store = createStore()
-    expect(store.getState().selection.line).toBeNull()
+    expect(store.getState().selection.line?.label).toBe('Hα')
+    expect(store.getState().selection.line?.wavelength_nm).toBe(656.281)
   })
 
-  it('is null in the exported defaultState', () => {
-    expect(defaultState.selection.line).toBeNull()
+  it('includes Hα in the exported defaultState', () => {
+    expect(defaultState.selection.line?.label).toBe('Hα')
   })
 
   it('round-trips a LineSelection through setState', () => {

@@ -230,6 +230,7 @@ describe('Grotrian — DOM mount behavior', () => {
         element: 'H',
         upper: hydrogenTermStateFromN(2),
         lower: hydrogenTermStateFromN(1),
+        line: null,
       },
     }))
 
@@ -246,7 +247,11 @@ describe('Grotrian — DOM mount behavior', () => {
   it('non-hydrogen elements show the v2-deferred placeholder card', () => {
     const store = createStore()
     const teardown = mountGrotrian(container, store)
-    store.setState((s) => ({ ...s, selection: { ...s.selection, element: 'He' } }))
+    // Suite scope keeps H as the active element; He pill is disabled in v1 UI.
+    store.setState((s) => ({
+      ...s,
+      selection: { ...s.selection, element: 'He', line: null },
+    }))
     expect(container.querySelector('svg')).toBeNull()
     expect(container.textContent).toMatch(/multi-electron Grotrian deferred to v2/)
     teardown()
@@ -281,8 +286,9 @@ describe('Grotrian — DOM mount behavior', () => {
     teardown()
   })
 
-  it('shows every arrow at full opacity when no line is focused (default state)', () => {
+  it('shows every arrow at full opacity when no line is focused', () => {
     const store = createStore()
+    store.setState((s) => ({ ...s, selection: { ...s.selection, line: null } }))
     const teardown = mountGrotrian(container, store)
     expect(store.getState().selection.line).toBeNull()
     // The default selection highlights 3-2 (active), but all OTHER arrows should

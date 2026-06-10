@@ -30,13 +30,13 @@ describe('encodeStateToHash', () => {
     expect(hash).toContain('T=300')
     expect(hash).toContain('color=cie1931')
     expect(hash).toContain('layout=grid-2x2')
-    expect(hash).toContain('av=cloud-2d')
+    expect(hash).toContain('av=superposition')
     expect(hash).toContain('plane=xz')
   })
 
-  it('omits the line= segment when selection.line is null', () => {
+  it('encodes the default Hα line segment', () => {
     const hash = encodeStateToHash(defaultState)
-    expect(hash).not.toContain('line=')
+    expect(hash).toContain('line=H_656.281')
   })
 
   it('encodes a LineSelection with slash → underscore', () => {
@@ -59,7 +59,7 @@ describe('decodeHashToState — round-trip', () => {
     expect(decoded!.conditions!.temperature_K).toBe(300)
     expect(decoded!.display!.layout).toBe('grid-2x2')
     expect(decoded!.display!.modes!.colorPipeline).toBe('cie1931')
-    expect(decoded!.display!.atomView!.mode).toBe('cloud-2d')
+    expect(decoded!.display!.atomView!.mode).toBe('superposition')
     expect(decoded!.display!.atomView!.slicePlane).toBe('xz')
   })
 

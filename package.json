@@ -6,7 +6,7 @@
   "description": "A digital benchtop for atomic physics — synced instrument suite.",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build && pnpm build:atlas && pnpm build:atlas-db",
+    "build": "tsc --noEmit && vite build && pnpm build:atlas && pnpm build:atlas-db && pnpm build:atlas-app && node --import tsx tools/stage-atlas-app.ts",
     "build:atlas": "node --import tsx tools/build-atlas-thumbnails.ts",
     "build:atlas-app": "node --import tsx tools/build-atlas-app.ts",
     "build:atlas-db": "node --import tsx tools/build-atlas-db.ts",

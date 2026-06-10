@@ -28,7 +28,7 @@ describe('saveToStorage / loadFromStorage — round-trip', () => {
     expect(loaded!.selection!.element).toBe('H')
     expect(loaded!.conditions!.temperature_K).toBe(300)
     expect(loaded!.display!.layout).toBe('grid-2x2')
-    expect(loaded!.display!.atomView!.mode).toBe('cloud-2d')
+    expect(loaded!.display!.atomView!.mode).toBe('superposition')
     expect(loaded!.display!.atomView!.slicePlane).toBe('xz')
   })
 

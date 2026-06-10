@@ -15,3 +15,12 @@ data/orbitals/*.bin
 *.sqlite-shm
 *.sqlite-wal
 .python-version
+
+# Test & e2e run artifacts
+test-results
+tests/e2e/playwright-report
+tests/e2e/screenshots
+
+# Python caches
+__pycache__/
+*.pyc

@@ -28,6 +28,7 @@ import {
 } from '../../physics/atomic'
 import type { ParsedState } from '../../physics/atomic'
 import { fireBus as defaultFireBus, type FireBus } from '../../store/fire-bus'
+import { isSuiteElement } from '../../suite-scope'
 import {
   type RangeMode,
   type AxisTick,
@@ -257,6 +258,16 @@ export function mountSpectrumBar(
     // Best-effort — populate upper/lower from the transition string when the
     // parser recognizes it. For multi-electron / hyperfine notation the parser
     // returns null and we leave the existing TermStates untouched.
+    // Non-suite elements: highlight the line in the spectrum only — keep the
+    // hydrogen instrument suite selection intact.
+    if (!isSuiteElement(element)) {
+      store.setState((s) => ({
+        ...s,
+        selection: { ...s.selection, line: lineSelection },
+      }))
+      ev.stopPropagation()
+      return
+    }
     const parsed = parseTransition(payload.transition)
     const states = parsed ? termStatesFromParsed(parsed, element, payload.transition) : null
     store.setState((s) => ({
@@ -444,7 +455,10 @@ function syncToggleStyles(buttons: NodeListOf<HTMLButtonElement>, active: string
 function renderPills(root: HTMLDivElement, active: ReadonlySet<PillId>): void {
   const html = PILLS.map((p) => {
     const on = active.has(p)
-    return `<button data-pill="${p}" style="${BTN_STYLE} background: ${on ? '#0a0a0a' : '#fff'}; color: ${on ? '#fff' : '#0a0a0a'};">${PILL_LABEL[p]}</button>`
+    const suiteOnly = p !== 'H' && p !== 'survey'
+    const title = suiteOnly ? 'Lines only in v1 — open Atlas for full context' : ''
+    const opacity = suiteOnly ? 'opacity: 0.55;' : ''
+    return `<button data-pill="${p}" title="${title}" style="${BTN_STYLE} background: ${on ? '#0a0a0a' : '#fff'}; color: ${on ? '#fff' : '#0a0a0a'}; ${opacity}">${PILL_LABEL[p]}${suiteOnly ? ' · lines' : ''}</button>`
   }).join('')
   root.innerHTML = html
 }

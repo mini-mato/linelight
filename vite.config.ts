@@ -1,13 +1,20 @@
-import { defineConfig } from "vite";
+import { resolve } from 'node:path'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: "./",
+  base: './',
   build: {
-    target: "es2022",
+    target: 'es2022',
     sourcemap: true,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        learn: resolve(__dirname, 'learn.html'),
+      },
+    },
   },
   server: {
     port: 5173,
     open: false,
   },
-});
+})

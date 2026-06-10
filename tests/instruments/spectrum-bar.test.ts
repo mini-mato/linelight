@@ -252,7 +252,7 @@ describe('mountSpectrumBar', () => {
     expect(lineEls.length).toBe(expected.length)
   })
 
-  it('updates store.selection.element when a line is clicked', () => {
+  it('highlights a non-suite line without switching the hydrogen suite element', () => {
     const store = createStore()
     mountSpectrumBar(container, store)
     const naLine = container.querySelector<HTMLElement>(
@@ -260,7 +260,8 @@ describe('mountSpectrumBar', () => {
     )
     expect(naLine).not.toBeNull()
     naLine!.click()
-    expect(store.getState().selection.element).toBe('Na')
+    expect(store.getState().selection.element).toBe('H')
+    expect(store.getState().selection.line?.element).toBe('Na')
   })
 
   it('teardown removes the rendered scaffold and stops responding to store changes', () => {
@@ -298,6 +299,7 @@ describe('mountSpectrumBar', () => {
 
   it('renders every visible line at full opacity when no line is focused', () => {
     const store = createStore()
+    store.setState((s) => ({ ...s, selection: { ...s.selection, line: null } }))
     mountSpectrumBar(container, store)
     const lineEls = container.querySelectorAll<HTMLElement>('[data-role="lines"] [data-line]')
     expect(lineEls.length).toBeGreaterThan(0)
@@ -464,6 +466,7 @@ describe('mountSpectrumBar', () => {
 
   it('is a no-op for fire-bus emits when no line is focused', () => {
     const store = createStore()
+    store.setState((s) => ({ ...s, selection: { ...s.selection, line: null } }))
     const bus = createFireBus()
     mountSpectrumBar(container, store, { bus })
     expect(store.getState().selection.line).toBeNull()

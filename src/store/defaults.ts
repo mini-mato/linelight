@@ -1,31 +1,14 @@
-import type { State, TermState } from '../types'
+import { hydrogenAlphaSelection } from '../selection/h-alpha'
+import type { State } from '../types'
 
-const hydrogen2s: TermState = {
-  n: 2,
-  l: 0,
-  s: 0.5,
-  j: 0.5,
-  electronConfig: '2s¹',
-  termSymbol: '²S₁/₂',
-  energy_eV: -3.4,
-}
-
-const hydrogen3p: TermState = {
-  n: 3,
-  l: 1,
-  s: 0.5,
-  j: 1.5,
-  electronConfig: '3p¹',
-  termSymbol: '²P₃/₂',
-  energy_eV: -1.51,
-}
+const hAlpha = hydrogenAlphaSelection()
 
 export const defaultState: State = {
   selection: {
-    element: 'H',
-    upper: hydrogen3p,
-    lower: hydrogen2s,
-    line: null,
+    element: hAlpha.element,
+    upper: hAlpha.upper,
+    lower: hAlpha.lower,
+    line: hAlpha.line,
   },
   conditions: {
     temperature_K: 300,
@@ -47,7 +30,7 @@ export const defaultState: State = {
       fidelityLabel: 'always',
     },
     atomView: {
-      mode: 'cloud-2d',
+      mode: 'superposition',
       activePane: 'upper',
       slicePlane: 'xz',
       upperM: 0,

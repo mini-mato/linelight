@@ -34,7 +34,13 @@ const WAVELENGTH_FRAMES: readonly WavelengthFrame[] = ['vacuum', 'air']
 const ENERGY_UNITS: readonly EnergyUnit[] = ['eV', 'cm-1', 'Hz', 'nm']
 const SPECTRUM_SCALES: readonly SpectrumScale[] = ['linear', 'log']
 const FIDELITY_LABELS: readonly FidelityLabel[] = ['always', 'on-hover', 'hidden']
-const ATOM_VIEW_MODES: readonly AtomViewMode[] = ['cloud-2d', 'cloud-3d', 'shells', 'term-table']
+const ATOM_VIEW_MODES: readonly AtomViewMode[] = [
+  'cloud-2d',
+  'cloud-3d',
+  'shells',
+  'term-table',
+  'superposition',
+]
 const ATOM_VIEW_PANES: readonly AtomViewPane[] = ['upper', 'lower']
 const ATOM_VIEW_SLICE_PLANES: readonly AtomViewSlicePlane[] = ['xz', 'xy', 'yz']
 const ATOM_VIEW_SHELL_MODES: readonly AtomViewShellMode[] = ['full', 'collapsed', 'hidden']

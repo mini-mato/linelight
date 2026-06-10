@@ -28,6 +28,7 @@ import {
   representativeE1BranchesForBareHydrogenTransition,
   type OrbitalDescriptor,
 } from '../../physics/atomic'
+import { isSuiteElement } from '../../suite-scope'
 import { hydrogenLevelEnergy_eV, formatEnergy } from './physics'
 import {
   SERIES_NAMES,
@@ -368,16 +369,18 @@ export function mountGrotrian(
   let svg: SVGSVGElement | null = null
   let arrows: readonly Arrow[] = []
 
-  function pillButton(label: string, active: boolean, dataAttr: string): string {
+  function pillButton(label: string, active: boolean, dataAttr: string, disabled = false): string {
     const bg = active ? '#0a0a0a' : '#fff'
     const fg = active ? '#fff' : '#0a0a0a'
-    return `<button ${dataAttr} style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 4px 9px; border: 1px solid #0a0a0a; background: ${bg}; color: ${fg}; cursor: pointer;">${label}</button>`
+    const muted = disabled ? 'opacity: 0.45; cursor: not-allowed;' : 'cursor: pointer;'
+    const title = disabled ? 'title="Full Grotrian deferred — see Atlas"' : ''
+    return `<button ${dataAttr} ${title} ${disabled ? 'disabled aria-disabled="true"' : ''} style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 4px 9px; border: 1px solid #0a0a0a; background: ${bg}; color: ${fg}; ${muted}">${label}${disabled ? ' · atlas' : ''}</button>`
   }
 
   function renderElementPills(currentEl: ElementSymbol): void {
     if (!elementPills) return
     elementPills.innerHTML = SUPPORTED_ELEMENTS.map((sym) =>
-      pillButton(sym, sym === currentEl, `data-element="${sym}"`),
+      pillButton(sym, sym === currentEl, `data-element="${sym}"`, !isSuiteElement(sym)),
     ).join('')
   }
 
@@ -487,6 +490,7 @@ export function mountGrotrian(
     const unitAttr = el.getAttribute('data-unit')
     if (elementAttr && SUPPORTED_ELEMENTS.includes(elementAttr as ElementSymbol)) {
       const sym = elementAttr as ElementSymbol
+      if (!isSuiteElement(sym)) return
       store.setState((s) =>
         s.selection.element === sym ? s : { ...s, selection: { ...s.selection, element: sym } },
       )
