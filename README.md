@@ -2,7 +2,7 @@
 
 A digital benchtop for atomic physics. Synced instrument displays — Spectrum Bar, Grotrian energy ladder, Atom View (2D + 3D orbital clouds), a selected-transition Cockpit, and more — all driven from one shared store. Pick an element, click a spectral line, watch every panel respond.
 
-**Live demo:** https://timmiano.com/linelight/ · **Atlas explorer:** https://timmiano.com/linelight/atlas/
+**Live demo:** https://timmiano.com/linelight/ · **Learn (derivation):** https://timmiano.com/linelight/learn.html · **Atlas explorer:** https://timmiano.com/linelight/atlas/
 
 ## What's in the box
 
